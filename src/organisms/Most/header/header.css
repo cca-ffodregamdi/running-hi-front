@@ -1,0 +1,56 @@
+.runninghi-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 10px; /* 헤더 영역의 패딩 */
+  
+}
+
+.navBtn {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo img {
+  height: 70px; 
+  width: auto;
+  margin-left: 100px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* 각 버튼 사이의 간격 */
+  margin-right: 60px;
+  margin-left: auto;
+}
+
+.navBtn img {
+  max-width: 80%;
+  height: auto;
+}
+
+
+.hamburgur_bar{
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-right: 100px;
+}
+
+.hamBtn img{
+  max-width: 80%;
+}
+
+.navLine{
+  position: absolute;
+  z-index: -1;
+  margin-left: 100px;
+}

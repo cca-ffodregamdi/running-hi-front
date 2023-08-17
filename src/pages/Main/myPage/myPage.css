@@ -1,0 +1,91 @@
+@media (min-width: 768px) {
+    .body{
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 1000px;
+        max-width: var(--large-width);
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+body {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.user-profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.user-profile h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.user-profile p {
+    font-size: 16px;
+    color: #777;
+}
+
+.user-edit h2 {
+    font-size: 20px;
+    margin: 20px 0 10px;
+}
+
+.user-edit form {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-edit label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.user-edit input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.user-edit button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.user-edit button:hover {
+    background-color: #0056b3;
+}

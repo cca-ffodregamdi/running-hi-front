@@ -1,0 +1,30 @@
+.body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    aling-items: center;
+    background-color: beige;
+    padding: 8px 12px;
+}
+
+.navBar_logo{
+    size: 10px;
+}
+
+.navBar_menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navBar_menu li{
+    padding: 8px 20px;
+}

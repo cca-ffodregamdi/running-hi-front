@@ -1,0 +1,47 @@
+
+@media (min-width: 768px) {
+  .body{
+      font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+      display: flex;
+      flex-direction: row-reverse;
+      max-width: 1000px;
+      max-width: var(--large-width);
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 40px;
+      padding-bottom: 40px;
+  }
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #3a6ea5;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    width: 1300px;
+    height: 600px;
+    background-color: #ebebeb;
+    border-radius: 10px;
+  }
+
+  .container2 svg rect {
+    stroke: #000;
+    stroke-width: 10px;
+    fill: #ebebeb;
+    border-radius: 20px;
+  }

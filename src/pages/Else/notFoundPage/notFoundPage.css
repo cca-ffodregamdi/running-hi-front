@@ -1,0 +1,57 @@
+@media (min-width: 768px) {
+    .body{
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 1000px;
+        max-width: var(--large-width);
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+
+body {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
