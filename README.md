@@ -7,7 +7,7 @@
 ### REPO
 | Repository | FE | BE |
 | :---: | :---: | :---: |
-| **Linkedin** | [onClick_FE](https://github.com/cca-ffodregamdi/running-hi-frontend) | [onClick_FE](https://github.com/cca-ffodregamdi/running-hi-back) |
+| **Linkedin** | [onClick_FE](https://github.com/cca-ffodregamdi/running-hi-frontend) | [onClick_BE](https://github.com/cca-ffodregamdi/running-hi-back) |
 
 
 <!-- 메인 화면 + 주요 화면 표로 만들어서 깔끔하게 보여주면 좋을 듯!-->
