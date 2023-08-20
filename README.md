@@ -52,10 +52,8 @@
 
 <br>
 
-## MainPage
-
-
 ## 프로젝트 아키텍처
+#### **`✅ Atomic Design Pattern`**
 ```
 ─── 📁.github
 └── 📁 node_modules
@@ -129,6 +127,13 @@
 ```
 
 <Br>
+
+## Design UI-UX
+
+<img width="1000" alt="image" src="https://github.com/cca-ffodregamdi/running-hi-frontend/assets/119282494/3028181b-641f-491b-8fec-3dae61b328a0"> <br>
+<img width="1000" alt="image" src="https://github.com/cca-ffodregamdi/running-hi-frontend/assets/119282494/9381b4b0-7e28-4482-9c0b-8c55b3cf9e07">
+
+<br>
 
 
 ### ✅ Project Rules
