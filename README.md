@@ -130,11 +130,20 @@
 
 ## Design UI-UX
 
+### **`Key Color & Fonts`**
+<img width="1000" alt="image" src="https://github.com/cca-ffodregamdi/running-hi-frontend/assets/119282494/9381b4b0-7e28-4482-9c0b-8c55b3cf9e07"><br>
+### **`Atoms`**
 <img width="1000" alt="image" src="https://github.com/cca-ffodregamdi/running-hi-frontend/assets/119282494/3028181b-641f-491b-8fec-3dae61b328a0"> <br>
-<img width="1000" alt="image" src="https://github.com/cca-ffodregamdi/running-hi-frontend/assets/119282494/9381b4b0-7e28-4482-9c0b-8c55b3cf9e07">
+### **`organisms`**
+<img width="1000" alt="image" src="https://github.com/cca-ffodregamdi/running-hi-frontend/assets/119282494/96b87125-c8da-4667-8abf-8cdc7b2c3ea0"> 
 
 <br>
+<br>
 
+
+
+---
+<br>
 
 ### ✅ Project Rules
 * Issue가 생기면 Repository의 Issues에 기록하기
