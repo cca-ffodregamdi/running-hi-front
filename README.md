@@ -1,16 +1,22 @@
-<br>
+<div align="center">
 
-# [🏃] RUNNING HI, 러닝하이
+## [FE] RUNNING HI : 러닝하이 
 
 <Br>
 
-### REPO
-| Repository | FE | BE |
-| :---: | :---: | :---: |
-| **Linkedin** | [onClick_FE](https://github.com/cca-ffodregamdi/running-hi-frontend) | [onClick_BE](https://github.com/cca-ffodregamdi/running-hi-back) |
+<img width="250" alt="image" src="https://github.com/cca-ffodregamdi/.github/assets/119282494/ff52abf3-6873-4f68-8d35-c2ed0e5102e4">
 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fcca-ffodregamdi%2Frunning-hi-frontend&count_bg=%23FFA49F&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false)](https://hits.seeyoufarm.com)
 
-<!-- 메인 화면 + 주요 화면 표로 만들어서 깔끔하게 보여주면 좋을 듯!-->
+</div>
+
+<Br>
+
+ 
+## Plus Repository
+> ⚙️ **[BackEnd Repository](https://github.com/ca-ffodregamdi/running-hi-back)** <Br>
+> ⚙️ **[Team Notion](https://www.notion.so/hammang/adff9907f8244768b9c080bc519b3a1f?pvs=4)**
+
 
 <br>
 
@@ -18,54 +24,9 @@
 > **개발 버전** :
 > <br>
 > **프론트 서버** :
-> <br> 
-> **백엔드 서버** :
-
 <br>
-  
-## TEAM : 까 뽀드레감디
-> **메타버스 아카데미 2기** <br/> **개발기간: 2023.08.01 ~ 2023.08.31**
 
 
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/Subak-Uncle"><img src="https://avatars.githubusercontent.com/Subak-Uncle" width="150px;" alt="">
-    <td align="center"><a href="https://github.com/Dylan-SonJungin"><img src="https://avatars.githubusercontent.com/Dylan-SonJungin" width="150px;" alt="">
-    <td align="center"><a href="https://github.com/raxchaz"><img src="https://avatars.githubusercontent.com/raxchaz" width="150px;" alt="">
-    <td align="center"><a href="https://github.com/numerical43"><img src="https://avatars.githubusercontent.com/numerical43" width="150px;" alt="">
-    <td align="center"><a href="https://github.com/hodin030"><img src="https://avatars.githubusercontent.com/hodin030" width="150px;" alt="">
-    <td align="center"><a href="https://github.com/fakerdeft"><img src="https://avatars.githubusercontent.com/fakerdeft" width="150px;" alt="">
-  </tr>
-
-  <tr>
-    <td align="center"><b>김종완</b></td>
-    <td align="center"><b>손정인</b></td>
-    <td align="center"><b>라현지</b></td>
-    <td align="center"><b>강수의</b></td>
-    <td align="center"><b>이효진</b></td>
-    <td align="center"><b>조만제</b></td>
-  </tr>
-
-   <tr>
-    <td align="center"><a href="https://github.com/subak-uncle"><b>@subak-uncle</b></td>
-    <td align="center"><a href="https://github.com/Dylan-SonJungin"><b>@Dylan-SonJungin</b></td>
-    <td align="center"><a href="https://github.com/raxchaz"><b>@raxchaz</b></td>
-    <td align="center"><a href="https://github.com/numerical43"><b>@numerical43</b></td>
-    <td align="center"><a href="https://github.com/hodin030"><b>@hodin030</b></td>
-    <td align="center"><a href="https://github.com/fakerdeft"><b>@fakerdeft</b></td>
-  </tr>
-      
-  <tr>
-    <td align="center"><strong>기능</strong></td>
-    <td align="center"><strong>기능</strong></td>
-    <td align="center"><strong>기능</strong></td>
-    <td align="center"><strong>기능</strong></td>
-    <td align="center"><strong>기능</strong></td>
-    <td align="center"><strong>기능</strong></td>
-  </tr>
-</table>
-
-<br>
 
 ## 기술 스택
 #### Environment
@@ -91,23 +52,84 @@
 
 <br>
 
+## MainPage
+
 
 ## 프로젝트 아키텍처
+```
+─── 📁.github
+└── 📁 node_modules
 
+└── 📁 public
+    ├── ✏️ favicon.ico
+    ├── ✏️ index.html
 
-<br>
+└── 📁 src
+   ├── 🗂️ assets
+   │   ├── 💾 image
+   │   │   ├── ✅ black.png
+   │   │   ├── ✅ logo.svg
 
-## 요구 사항
-🔻 기능 별로 각각의 상황을 테스트하는 코드를 구현한다.<Br>
-🔻 새로운 기능, 버그 fix 등의 코드 수정이 있다면 이슈를 작성한다.
+   ├── 🗂️ components
+   │   ├── 💾 pages
+   │   │   │   ├── 📑 Admin
+   │   │   │   ├── 📑 Else
+   │   │   │   ├── 📑 Log
+   │   │   │   ├── 📑 Main
+   │   │   │   │   ├── ✏️ MainHomePage
+   │   │   │   │   │   ├── ✅ MainHomePage.css
+   │   │   │   │   │   ├── ✅ MainHomePage.jsx
+   │   │   │   │   ├── ✏️ MyFeedPage
+   │   │   │   │   │   ├── ✅ MyFeedPage.css
+   │   │   │   │   │   ├── ✅ MyFeedPage.jsx
+   │   │   │   │   ├── ✏️ MyPage
+   │   │   │   │   │   ├── ✅ MyPage.css
+   │   │   │   │   │   ├── ✅ MyPage.jsx
+   │   │   │   ├── 📑 Post
 
-<br>
+   │   ├── 🗂️ UI [Common]
+   │   │   ├── 💾 atoms
+   │   │   │   ├── 📑 Button
+   │   │   │   │   ├── ✏️ AboutBtn
+   │   │   │   │   │   ├── ✅ AboutBtn.svg
+   │   │   │   │   ├── ✏️ CheckBtn
+   │   │   │   │   │   ├── ✅ CheckBtn.css
+   │   │   │   │   │   ├── ✅ CheckBtn.jsx
+   │   │   │   ├── 📑 Input
+   │   │   │   │   ├── ✏️ InputField
+   │   │   │   │   │   ├── ✅ InputField.css
+   │   │   │   │   │   ├── ✅ InputField.jsx
+   │   │   │   │   ├── ✏️ TextArea
+   │   │   │   │   │   ├── ✅ TextArea.css
+   │   │   │   │   │   ├── ✅ TextArea.jsx
+   │   │   │   ├── 📑 Image
+   │   │   │   │   ├── ✏️ Logo
+   │   │   │   │   │   ├── ✅ Logo.svg
+   │   │   ├── 💾 molecules
+   │   │   │   ├── 📑 Else
+   │   │   │   ├── 📑 Post
+   │   │   ├── 💾 organisms
+   │   │   │   ├── 📑 MiniPage
+   │   │   │   ├── 📑 Modal
+   └── ─── ─── ├── 📑 Most
 
-## 기능 소개
+   ├── 🗂️ router
 
+   ├── 🗂️ fonts
+   └── ── ├── ✏️ files
 
+   │   ├── App.js
+   │   ├── index.js
+   └── ─── index.css
+
+   │   ├── .gitignore
+   │   ├── package-lock.json
+   │   ├── package.json
+   └── ── README.md
+```
 
 <Br>
+
 
 ### ✅ Project Rules
 * Issue가 생기면 Repository의 Issues에 기록하기
