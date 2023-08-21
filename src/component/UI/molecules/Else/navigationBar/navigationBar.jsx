@@ -1,33 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="navigationBar.css">
-    <title>NavigationBar</title>
-</head>
-<body>
-    <nav class="navBar">
-        <div class="navBar_logo">
-            <img src="/src/atoms/Image/logo/logo.svg" alt="로고" width="200" height="100">
-            <a href="">RunningHI</a>
-        </div>
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './NavigationBar.css';
 
-        <ul class="navBar_menu">
-            <li><a href="">
-                <img src="/src/atoms/Button/homeBtn/homeBtn.svg" alt="로고" width="200" height="100">
-            </a>Home</li>
-            <li><a href="">
-                <img src="/src/atoms/Button/aboutBtn/aboutBtn.svg" alt="로고" width="200" height="100">
-            </a>About</li>
-            <li><a href="">
-                <img src="/src/atoms/Button/loginBtn/loginBtn.svg" alt="로고" width="200" height="100">
-            </a>Login</li>
-        </ul>
-
-        <ul class="navBar_icons">
-           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.<path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-        </ul>
+const NavigationBar = () => {
+  return (
+    <nav className="navigation-bar">
+      <ul className="nav-list">
+        <li className="nav-item"><a href="#">Home</a></li>
+        <li className="nav-item"><a href="#">About</a></li>
+      </ul>
     </nav>
-</body>
-</html>
+  );
+};
+
+export default NavigationBar;
