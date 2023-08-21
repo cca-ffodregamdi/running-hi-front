@@ -1,6 +1,5 @@
  // App.js
 import React from 'react';
-import Button from './Button';
 
 const App = () => {
   const handleClick = () => {
@@ -10,7 +9,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Button Component Example</h1>
-      <Button onClick={handleClick}>Click Me</Button>
+      {/* <Button onClick={handleClick}>Click Me</Button> */}
     </div>
   );
 };
