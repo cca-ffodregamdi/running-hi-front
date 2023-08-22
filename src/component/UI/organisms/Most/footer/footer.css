@@ -41,7 +41,7 @@ footer{
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     display: flex;
     flex-direction: column;
-    background-color:#E5F0FF;
+    background-color:#004E98;
     padding: 20px; 
 }
 
@@ -54,6 +54,7 @@ footer{
     max-width: 1300px;
     width: 100%;
     margin-bottom: 20px;
+    color: #fff; 
 }
 
 .footer-nav h2{
@@ -71,12 +72,14 @@ footer{
     font-weight: 300;
     margin-top:30px;
     margin-left: 30px;
+    color: #fff; 
 }
 
 .footer-nav2 hr{
     margin-top: 100px;
     margin-left: -150px;
     transform: rotate(90deg);
+    
 }
 
 
@@ -96,6 +99,7 @@ footer{
     margin-left: 200px;
     flex-direction: column;
     margin: 5px 0;
+    color: #fff; 
 }
 
 
@@ -108,11 +112,23 @@ footer{
 }
 
 
-
-
 .footer-right a{
     display: block; 
     margin: 5px 0;
     text-decoration: none;
-    color: #000; 
+    color: #fff; 
+    line-height: 1.5;
+}
+
+.footer-right2{
+    margin-top: 10;
+    margin: 5px 0;
+}
+
+.footer-right2 p{
+    display: block; 
+    margin: 5px 0;
+    text-decoration: none;
+    color: #fff; 
+    line-height: 1.5;
 }

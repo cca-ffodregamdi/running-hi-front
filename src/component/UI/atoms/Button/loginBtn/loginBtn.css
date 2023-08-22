@@ -1,0 +1,29 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+a {
+    text-decoration: none;
+    font-size: 17px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10%;
+    /* background-color: #f199bc; */
+    border: 3px solid #004E98;
+    color: #000;
+    display: table-cell;
+    /* margin: 10px; */
+   }
+   
+
+a:hover{
+    letter-spacing: 2px;
+    transform: scale(1.2);
+    border-radius: 5%;
+    cursor: pointer;
+    /* transform: translate(-50%, -50%); */
+    /* animation: ring 70s infinite; */
+    background-color: #004E98;
+    color: #fff;
+} 
