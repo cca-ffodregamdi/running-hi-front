@@ -1,9 +1,9 @@
- // App.js
-import React from 'react';
+// App.js
+import React from "react";
 
 const App = () => {
   const handleClick = () => {
-    alert('Button clicked!');
+    alert("Button clicked!");
   };
 
   return (
@@ -15,3 +15,4 @@ const App = () => {
 };
 
 export default App;
+
