@@ -8,7 +8,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Button Component Example</h1>
+      {/* <h1>Button Component Example</h1> */}
       {/* <Button onClick={handleClick}>Click Me</Button> */}
     </div>
   );
