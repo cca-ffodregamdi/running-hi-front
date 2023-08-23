@@ -1,13 +1,22 @@
 
-import React from 'react';
-import { header, footer, SideBar } from "./UI/organisms/Most"
-import './SpoqaHanSansNeo.css'; 
+// import React from 'react';
+// import './SpoqaHanSansNeo.css'; 
 
-function App(){
+// function App(props){
 
-    return{
+//     return(
+//         <Layout
+//             width={1280}
+//             height={height}
 
-    }
+//              header={
+//                 <Header />
+//             }
+            
+//             footer={
+//                 <Footer />
+//             }
+//         )
+//     }
 
-}
 
