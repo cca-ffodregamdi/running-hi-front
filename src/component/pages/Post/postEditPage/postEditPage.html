@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="postEditPage.css">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+
+    <script src="/src\resource/js/summernote/summernote-lite.js"></script>
+    <script src="/src/resource/js/summernote/lang/summernote-ko-KR.js"></script>
+    <link rel="stylesheet" href="/src/resource/css/summernote/summernote-lite.min.css">
+
+
+    <title>postCreatePage</title>
+</head>
+
+
+<body> 
+    <div class="postCreatePage">
+
+        <div>
+           
+            <h1>RUNNINGHI</h1>
+        </div>
+            
+    
+        <div form method="post">
+
+            <div>                    
+                <label for="title">제목</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <textarea class="summernote" id="summernote" name="editordata"></textarea>
+            
+            <script>
+                $('.summernote').summernote({
+                    toolbar: [
+                        // [groupName, [list of button]]
+                        ['fontname', ['fontname']],
+                        ['fontsize', ['fontsize']],
+                        ['style', ['bold', 'italic', 'underline','strikethrough', 'clear']],
+                        ['color', ['forecolor','color']],
+                        ['table', ['table']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['height', ['height']],
+                        ['insert',['picture','link','video']],
+                        ['view', ['fullscreen', 'help']]
+                    ],
+                    fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New','맑은 고딕','궁서','굴림체','굴림','돋움체','바탕체'],
+                    fontSizes: ['8','9','10','11','12','14','16','18','20','22','24','28','30','36','50','72']
+                });
+                </script> 
+        </div>
+        
+        <br>
+
+        <button type="submit">작성하기</button>
+</body>
+</html>
+
