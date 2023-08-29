@@ -9,7 +9,7 @@
 <div align="center">
  
 ## ✨MainPage
-<img width="1000" alt="image" src="https://github.com/cca-ffodregamdi/running-hi-frontend/assets/119282494/100573d7-9c6c-4dcd-b3bc-ac283cf5cbf0">
+<img width="800" alt="image" src="https://github.com/cca-ffodregamdi/running-hi-frontend/assets/119282494/100573d7-9c6c-4dcd-b3bc-ac283cf5cbf0">
 
 </div>
  
