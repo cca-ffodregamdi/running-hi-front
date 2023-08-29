@@ -1,71 +1,465 @@
-@media (min-width: 768px) {
-    .body{
-        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-        display: flex;
-        flex-direction: row-reverse;
-        max-width: 1000px;
-        max-width: var(--large-width);
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 40px;
-        padding-bottom: 30px;
-    }
-}
-
-
-body {
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    /* font-size: large; */
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #f0f0f0;
-}
-
-.postCreatePage-main {
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    font-size:larger;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-form {
+.mobileheader {
     display: flex;
-    flex-direction: column;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    margin-left: 60px;
+    margin-top: 100px;
+    font-size: 40px;
+    letter-spacing: -4px;
+    font-weight: 800;
+    font-style:italic;
 }
 
-label {
+/* 00. 제목 입력 칸 */
+
+.keywordtitle{
+    background-color: #fff;
+    text-align: center;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    letter-spacing: -2px;
+    margin-top: 50px;
+    margin-left: 530px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    /* border-color: #d9d9d9; */
     font-size: 16px;
-    margin-bottom: 5px;
+
+    width: 500px;
+    height: 30px;
 }
 
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
 
-button {
-    background-color: #004E98;
-    color: white;
+.no-border {
+    background-color: #fff;
+    text-align: center;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    letter-spacing: -2px;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    margin-top: 30px;
+    margin-left: 480px;
+    font-weight: 300;
+    margin-bottom: 60px;
+    font-size: 40px;
+
+    width: 1000px;
+    height: 60px;
+  }
+
+   ::placeholder {
+    background-color: #fff;
+    text-align: center;
+    color: #C5C5C5;
+    background: #fff;
+    
+  }
+
+  div {
+    background-color: #fff;
+  }
+
+
+div.postCreatePage h1 {
+    background-color: #fff;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 50px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    text-align: center;
+    margin-bottom: 0px;
 }
 
-button:hover {
-    background-color: #0056b3;
+div.postCreatePage h4 {
+    background-color: #fff;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 10px;
+    letter-spacing: -2.5px;
+    padding-top: 0px;
+    text-align: center;
+    padding-bottom: 30px;
+} 
+
+
+
+/* 02. hr 라인으로 게시글 작성 부분과 분리 */
+.linear hr {
+    border: none;
+    height: 1px;
+    background-color: #d9d9d9;
+    margin: 0px;
 }
+
+
+
+/* 03. 게시글 작성 부분 */
+/* 썸머노트 기본 설정 */
+.note-group-select-from-files {
+    background-color: #fff;
+    display: none;
+}
+
+
+.note-editor .note-editing-area {
+    background-color: #fff;
+    min-height: 400px; 
+    margin-bottom: 10px;
+}
+
+/* 썸머노트 버튼 꾸미기! 버꾸 */
+.note-toolbar button {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 30px;
+    color: #212529;
+    padding: 5px 10px; 
+    /* margin: 0 3px; */
+    cursor: pointer;
+}
+
+.note-toolbar button:hover {
+    background-color: #e2e6ea;
+}
+
+
+.note-editor .note-toolbar {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+
+.note-toolbar {
+    display: flex;
+    margin-left: 200px;
+    border: none;
+}
+
+
+
+/* 04. 작성 버튼 부분 */
+button.writeinputtext {
+    display: block;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    letter-spacing: -2px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 15px;
+
+    /* margin: 100px auto; */
+
+    margin-left: 1180px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    width: 100px;
+    height: 50px;
+    
+    border-radius: 10px;
+    padding-left: 6px;
+    padding-right: 10px;
+
+    
+    background-color: #fff;
+    color: black; 
+    border: 2px solid #C6C6C6;
+    text-align: center;
+}
+
+
+/* 05.드롭다운 필터 설정 */
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: 10px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+button.writeinputtext:hover{
+    background-color: #d9d9d9;
+}
+
+
+.wea-dropdown {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    letter-spacing: -1px;
+    margin-left: 50px;
+    padding: 10px;
+}
+
+svg {
+    opacity: 0;
+}
+
+.time-dropdown {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    letter-spacing: -1px;
+    margin-left: 50px;
+    padding: 10px;
+}
+
+.level-dropdown {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    letter-spacing: -1px;
+    margin-left: 50px;
+    padding: 10px;
+}
+
+
+.location-dropdown {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    letter-spacing: -1px;
+    margin-left: 50px;
+    padding: 10px;
+}
+
+
+/* --------------------- 반응형 웹 미디어 쿼리 존 ------------------------- */
+
+
+/* screen이 540px 이하일 때 적용되는 스타일로, Max width = 화면의 최대 크기
+   정방형 = portrait 가로형 = landscape */
+
+
+
+@media screen and (max-width: 540px) {
+
+    div.mobileheader {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        margin-left: 40px;
+        margin-top: 30px;
+        font-size: 18px;
+        letter-spacing: -2px;
+        font-weight: 800;
+    }
+
+    div.postCreatePage h1 {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-size: 30px;
+        margin-top: 10px;
+        padding-top: 10px;
+        font-weight: 800;
+    }
+
+    div.postCreatePage h4 {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-size: 16px;
+        margin-top: 10px;
+        /* padding-top: 10px; */
+        font-weight: 300;
+    }
+
+    div
+    .mobilenav 
+    .uk-navbar-left,
+    .uk-navbar-toggle {
+            margin-right: 20px;
+            margin-top: 0px;
+        }
+   
+
+   .no-border {
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 300;
+        padding: 10px;
+        width: 80%;
+    }
+
+
+
+    input.no-border {
+        width: 300px;
+        height: 30px;
+        font-size: 20px;
+        justify-content: center;
+        margin-left: 50px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .inputtext {
+        display: flex;
+        justify-content: center;
+        margin: 10px auto;
+    }
+
+    .note-editor .note-editing-area {
+        justify-content: center;
+        min-height: 200px; 
+    }
+
+    .note-toolbar {
+        justify-content: center;
+    }
+
+    .note-toolbar button {
+        justify-content: center;
+        padding: 3px 8px;
+        margin-right: 3px; /* 버튼 사이의 오른쪽 여백 설정 */
+        margin-left: 3px;  /* 버튼 사이의 왼쪽 여백 설정 */
+        font-size: 12px;
+    }
+
+    button.writeinputtext {
+        font-size: 12px; /* 작은 폰트 사이즈로 변경 */
+        width: 80px; /* 더 작은 너비로 조정 */
+        height: 40px; /* 더 작은 높이로 조정 */
+        margin-left: 160px; /* 위치를 왼쪽으로 이동 */
+        margin-top: 20px; /* 상단 여백 조정 */
+        margin-bottom: 30px; /* 하단 여백 조정 */
+    }
+
+    div.filter {
+        font-size: 9px;
+        display: flex; /* Flex 컨테이너로 설정 */
+        justify-content: center; /* 가로 방향 가운데 정렬 */
+        margin-left: -35px;
+    }
+    
+    .filter > div {
+        display: inline-block;
+        max-width: calc(50% - 10px);
+        width: 80px; /* 너비 70px로 설정 */
+    }
+
+    .wea-dropdown,
+    .time-dropdown,
+    .level-dropdown,
+    .location-dropdown {
+        width: 72px;
+        height: 42px;
+        margin: 8px;
+
+    }
+
+}
+
+
+@media screen and (orientation: landscape) {
+
+    div.mobileheader {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        margin-left: 40px;
+        margin-top: 30px;
+        font-size: 30px;
+        letter-spacing: -2px;
+        font-weight: 800;
+    }
+
+    div.postCreatePage h1 {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-size: 40px;
+        margin-top: 5px;
+        padding-top: 10px;
+        letter-spacing: -2;
+        font-weight: 800;
+    }
+
+    br{
+        display:none;
+     }
+ 
+
+    div.postCreatePage h4 {
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        font-size: 16px;
+        margin-top: 5px;
+        /* padding-top: 10px; */
+        font-weight: 500;
+    }
+
+    div
+    .mobilenav 
+    .uk-navbar-left,
+    .uk-navbar-toggle {
+            margin-right: 20px;
+            margin-top: 0px;
+        }
+   
+
+   .no-border {
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 300;
+        padding: 10px;
+        width: 80%;
+    }
+
+
+
+    input.no-border {
+        width: 300px;
+        height: 30px;
+        font-size: 20px;
+        justify-content: center;
+        margin-left: 600px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .inputtext {
+        display: flex;
+        justify-content: center;
+        margin: 10px auto;
+    }
+
+    .note-editor .note-editing-area {
+        justify-content: center;
+        min-height: 200px; 
+    }
+
+    .note-toolbar {
+        justify-content: center;
+    }
+
+    .note-toolbar button {
+        justify-content: center;
+        padding: 3px 8px;
+        margin-right: 3px; /* 버튼 사이의 오른쪽 여백 설정 */
+        margin-left: 3px;  /* 버튼 사이의 왼쪽 여백 설정 */
+        font-size: 12px;
+    }
+
+    button.writeinputtext {
+        font-size: 12px; /* 작은 폰트 사이즈로 변경 */
+        width: 80px; /* 더 작은 너비로 조정 */
+        height: 40px; /* 더 작은 높이로 조정 */
+        margin-left: 160px; /* 위치를 왼쪽으로 이동 */
+        margin-top: 20px; /* 상단 여백 조정 */
+        margin-bottom: 30px; /* 하단 여백 조정 */
+    }
+
+    div.filter {
+        font-size: 9px;
+        display: flex; /* Flex 컨테이너로 설정 */
+        justify-content: center; /* 가로 방향 가운데 정렬 */
+        margin-left: -35px;
+    }
+    
+    .filter > div {
+        display: inline-block;
+        max-width: calc(50% - 10px);
+        width: 80px; /* 너비 70px로 설정 */
+    }
+
+    .wea-dropdown,
+    .time-dropdown,
+    .level-dropdown,
+    .location-dropdown {
+        width: 72px;
+        height: 42px;
+        margin: 8px;
+
+    }
+
+
+}
+
+

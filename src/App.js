@@ -1,23 +1,24 @@
-//App.js
-
 import React from 'react';
-import { useDarkMode } from './component/UI/Effect/useDarkMode/useDarkMode';
-import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme } from './themes'; 
-import GlobalStyles from './GlobalStyles'; 
-import Toggle from './Toggle';
+import { Suspense } from 'react';
+import { Routes, BrowserRouter, Route} from 'react-router-dom';
+import Main from './Darkmode/components/Main';
+import Sub from './Darkmode/components/Sub';
+import { ThemeProvider } from './Darkmode/context/themeProvider';
+import { GlobalStyle } from './Darkmode/theme/GlobalStyles';
 
-function App(){
-  const [theme, toggleTheme] = useDarkMode();
-  const themeMode = theme === 'light' ? lightTheme : darkTheme;
-
+function App() {
   return (
-    <>
-      <ThemeProvider theme={themeMode}>
-        <GlobalStyles /> 
-        <Toggle theme={theme} toggleTheme={toggleTheme} />
+    <BrowserRouter>
+      <ThemeProvider>
+        <GlobalStyle />
+        <Suspense fallback={<div>...loading</div>}>
+          <Routes>
+            <Route exact path="/" component={Main}/>
+            <Route exact path="/sub" component={Sub}/>
+          </Routes>
+        </Suspense>
       </ThemeProvider>
-    </>
+    </BrowserRouter>
   );
 }
 

@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "./index.css";
+import './index.css';
 import App from './App';
-// import reportWebVitals from './reportWebVitals';
-import DarkOrLight from './component/UI/Effect/ThemeContext/DarkOrLight';
 
-// import CommentList from './component/pages/Post/comment/commentList';
+const rootElement = document.getElementById('root');
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(rootElement);
+root.render(
   <React.StrictMode>
-    <DarkOrLight />
-  </React.StrictMode>,
-  document.getElementById('root')  
+    <App />
+  </React.StrictMode>
 );
-
-// reportWebVitals();

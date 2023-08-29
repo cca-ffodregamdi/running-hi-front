@@ -1,56 +1,164 @@
-.runninghi-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 40px;
-  padding: 10px; /* 헤더 영역의 패딩 */
-  
+@media (min-width: 768px) {
+  .footer-main{
+      font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+      background-color: #000;
+      display: flex;
+      flex-direction: row-reverse;
+      max-width: 1000px;
+      max-width: var(--large-width);
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 40px;
+      padding-bottom: 40px;
+  }
 }
 
-.navBtn {
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body {
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+  background-color: #000;
 }
 
-.logo {
-  height: 70px; 
-  width: auto;
-  margin-left: 100px;
+a.logo{
+ font-weight: 1000;
+ letter-spacing: -2px;
+ margin-left: 100px;
 }
 
-.header-nav {
-  display: flex;
-  align-items: center;
-  gap: 30px; /* 각 버튼 사이의 간격 */
-  margin-right: 60px;
-  margin-left: auto;
-}
-
-.navBtn  {
-  max-width: 80%;
-  height: auto;
-}
-
-
-.hamburgur_bar{
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
+a {
+  color: #fff;
+  font-weight: 200px;
+  letter-spacing: -1.5px;
+  padding-left: 100px;
   margin-right: 100px;
 }
 
-.ham-Btn {
-  max-width: 80%;
+/* header */
+
+.header {
+  background-color: #000;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 }
 
-.navLine{
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #000;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #1C1B1B;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
   position: absolute;
-  z-index: -1;
-  margin-left: 100px;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
 }

@@ -1,13 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import{ ReactComponent as checkButton } from './component/UI/atoms/Button/checkButton/checkButton.svg';
+import styled from 'styled-components';
+import { useDarkModeContext } from '../../../../context/DarkModeContext';
 
-const App = () => {
-  return(
-  <div>
-      <checkButton fill="blue"/>
-  </div>
+const StyledCheckButton = styled.button`
+  background-color: ${props => (props.darkMode ? 'black' : 'white')};
+  color: ${props => (props.darkMode ? 'white' : 'black')};
+  // ... other styles
+`;
+
+const CheckButton = () => {
+  const { darkMode, toggleDarkMode } = useDarkModeContext();
+
+  return (
+    <StyledCheckButton darkMode={darkMode} onClick={toggleDarkMode}>
+      Toggle Dark Mode
+    </StyledCheckButton>
   );
 };
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+export default CheckButton;
