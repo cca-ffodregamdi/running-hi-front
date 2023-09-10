@@ -4,7 +4,23 @@ body, html {
 body, input, button {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     letter-spacing: -1px;
-    font-size: 16px;
+}
+
+h4{
+    margin-top: 100px;
+    font-weight: 600;
+    font-size: 20px;
+    text-align:center; 
+    color: #004E98;
+}
+
+h1{
+    font-weight: 800;
+    letter-spacing: -2px;
+    font-size: 30px;
+    text-align:center; 
+    margin-top: -5px;
+    color: #004E98;
 }
 
 .segment{
@@ -69,12 +85,14 @@ text-shadow: none;
 }
 
 
-button, input {
+button {
     border: 0;
     outline: 0;
     font-size: 16px;
+    margin-top: 20px;
+    margin-left: 150px;
     border-radius: calc(16px * 20);
-    padding: 16px;
+    padding: 10px;
     background-color: #EBECF0;
     text-shadow: 1px 1px 0 #FFFFFF;
     
@@ -87,7 +105,13 @@ label {
 }
 
 
-input {
+input{
+    border: 0;
+    outline: 0;
+    padding: 15px;
+    font-size: 14px;
+    margin-left: 150px;
+    border-radius: calc(16px * 20);
     margin-right: calc(16px / 2);
     box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFFFFF;
     width: 100%;
