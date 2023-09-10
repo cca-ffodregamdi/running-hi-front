@@ -1,15 +1,17 @@
-import React from 'react';
+import React from "react";
 
-const Footer = () => { 
+const Footer = () => {
   return (
     <footer>
       <div className="footer-content">
-
         <div className="footer-nav">
           <h2>RunningHI</h2>
           <a href=""></a>
           <hr />
-          <h5>러닝하이를 찾아주셔서 감사합니다.<br /> 더 나은 서비스를 위해 노력하겠습니다.</h5>
+          <h5>
+            러닝하이를 찾아주셔서 감사합니다.
+            <br /> 더 나은 서비스를 위해 노력하겠습니다.
+          </h5>
         </div>
 
         <div className="footer-nav2">
@@ -18,9 +20,9 @@ const Footer = () => {
 
         <nav className="footer-left">
           <h3>러닝하이</h3>
-          <p>상호명  | 까 뽀드레감디 </p>
-          <p>주소  | 경기도 성남시  </p>
-          <p>연락처 |  000 1234 5678</p>
+          <p>상호명 | 까 뽀드레감디 </p>
+          <p>주소 | 경기도 성남시 </p>
+          <p>연락처 | 000 1234 5678</p>
           <p>이메일 | ccaffodrecamdi@gmail.com</p>
         </nav>
 
@@ -52,10 +54,9 @@ const Footer = () => {
             </span>
           </nav>
         </div> */}
-
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

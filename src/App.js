@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./layout/Layout";
+import MainHomePage from "./component/pages/main/MainHomePage/MainHomePage";
 import LoginPage from "./component/pages/Log/loginPage/LoginPage";
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Layout />}>
-            <Route index element={<LoginPage />} />
+            <Route index element={<MainHomePage />} />
+            <Route exact path="/login" element={<LoginPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
