@@ -19,10 +19,10 @@ function MainHomePage() {
               height="1em"
               viewBox="0 0 384 512"
             >
-              {/* <style> */}
-              {/* svg */}
-              {/* {fill : #000000}  */}
-              {/* </style> */}
+              <style>
+                svg
+                {/* {fill : #000000}  */}
+              </style>
               <path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
             </svg>
           </button>
@@ -71,9 +71,11 @@ function MainHomePage() {
         <div className="owl-carousel custom-carousel owl-theme">
           <div
             className="item"
-            style={
-              "background-image: url(https://gwanghwamun.seoul.go.kr/resources/client/images/contents/img_introduce_2.jpg);"
-            }
+            style={{
+              backgroundImage: `url(
+                https://gwanghwamun.seoul.go.kr/resources/client/images/contents/img_introduce_2.jpg
+              )`,
+            }}
           >
             <div className="item-desc">
               <h3>광화문 코스</h3>
@@ -83,9 +85,11 @@ function MainHomePage() {
 
           <div
             className="item"
-            style={
-              "background-image: url(https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/212032b1-f1a7-4909-8aee-49b25fb40ca5.jpeg);"
-            }
+            style={{
+              backgroundImage: `url(
+                https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/212032b1-f1a7-4909-8aee-49b25fb40ca5.jpeg
+              )`,
+            }}
           >
             <div className="item-desc">
               <h3>한강 코스</h3>00
@@ -95,9 +99,11 @@ function MainHomePage() {
 
           <div
             className="item"
-            style={
-              "background-image: url(https://t4.ftcdn.net/jpg/04/41/28/39/360_F_441283928_x6wy8WX1Dnh4czUsxHgpXIqqztm939EV.jpg);"
-            }
+            style={{
+              backgroundImage: `url(
+                https://t4.ftcdn.net/jpg/04/41/28/39/360_F_441283928_x6wy8WX1Dnh4czUsxHgpXIqqztm939EV.jpg
+              )`,
+            }}
           >
             <div className="item-desc">
               <h3>서울숲 코스</h3>
@@ -107,9 +113,11 @@ function MainHomePage() {
 
           <div
             className="item"
-            style={
-              "background-image: url(https://www.cctimes.kr/news/photo/201704/486528_179235_2012.JPG);"
-            }
+            style={{
+              backgroundImage: `url(
+                https://www.cctimes.kr/news/photo/201704/486528_179235_2012.JPG
+              )`,
+            }}
           >
             <div className="item-desc">
               <h3>무심천 코스</h3>
@@ -119,9 +127,11 @@ function MainHomePage() {
 
           <div
             className="item"
-            style={
-              "background-image: url(https://img.hani.co.kr/imgdb/resize/2022/0902/166201400446_20220902.JPG);"
-            }
+            style={{
+              backgroundImage: `url(
+                https://img.hani.co.kr/imgdb/resize/2022/0902/166201400446_20220902.JPG
+              )`,
+            }}
           >
             <div className="item-desc">
               <h3>잠수교 코스</h3>
@@ -135,9 +145,11 @@ function MainHomePage() {
         <div className="owl-carousel custom-carousel owl-theme">
           <div
             className="item"
-            style={
-              "background-image: url(https://ucarecdn.com/75d7700d-c102-40ff-9ba1-f0641444c616/dota2.jpg);"
-            }
+            style={{
+              backgroundImage: `url(
+                https://ucarecdn.com/75d7700d-c102-40ff-9ba1-f0641444c616/dota2.jpg
+              )`,
+            }}
           >
             <div className="item-desc">
               <h3>오창호수공원 코스</h3>
@@ -147,9 +159,11 @@ function MainHomePage() {
 
           <div
             className="item"
-            style={
-              "background-image: url(https://ucarecdn.com/2a5f69bc-befa-49f4-acc6-ab1dcae514c7/winter3.jpg);"
-            }
+            style={{
+              backgroundImage: `url(
+                https://ucarecdn.com/2a5f69bc-befa-49f4-acc6-ab1dcae514c7/winter3.jpg
+              )`,
+            }}
           >
             <div className="item-desc">
               <h3>오송호수공원 코스</h3>
@@ -159,9 +173,11 @@ function MainHomePage() {
 
           <div
             className="item"
-            style={
-              "background-image: url(https://ucarecdn.com/ec1918b1-2674-452c-bf61-8f73d8cc40c6/rdr2.jpg);"
-            }
+            style={{
+              backgroundImage: `url(
+                https://ucarecdn.com/ec1918b1-2674-452c-bf61-8f73d8cc40c6/rdr2.jpg
+              )`,
+            }}
           >
             <div className="item-desc">
               <h3>방화수류정 코스</h3>
@@ -171,9 +187,11 @@ function MainHomePage() {
 
           <div
             className="item"
-            style={
-              "background-image: url(https://ucarecdn.com/6ba9052d-6105-4491-917b-e1a65b68f920/pubg.jpg);"
-            }
+            style={{
+              backgroundImage: `url(
+                https://ucarecdn.com/6ba9052d-6105-4491-917b-e1a65b68f920/pubg.jpg
+              )`,
+            }}
           >
             <div className="item-desc">
               <h3>강문해변 코스</h3>
@@ -183,9 +201,11 @@ function MainHomePage() {
 
           <div
             className="item"
-            style={
-              "background-image: url(https://ucarecdn.com/6ba9052d-6105-4491-917b-e1a65b68f920/pubg.jpg);"
-            }
+            style={{
+              backgroundImage: `url(
+                https://ucarecdn.com/6ba9052d-6105-4491-917b-e1a65b68f920/pubg.jpg
+              )`,
+            }}
           >
             <div className="item-desc">
               <h3>기업지원허브 코스</h3>
