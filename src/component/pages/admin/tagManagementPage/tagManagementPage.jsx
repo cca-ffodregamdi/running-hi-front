@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-export default function comment() {
+export default function tagManagementPage() {
   return (
     <View>
-      <Text>comment</Text>
+      <Text>tagManagementPage</Text>
     </View>
   );
 }
