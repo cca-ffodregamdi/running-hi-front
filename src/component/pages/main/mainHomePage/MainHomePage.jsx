@@ -1,10 +1,10 @@
 import React from "react";
 // import styled from "styled-components";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./MainHomePage.css";
+import "./mainHomePage.css";
 
 // App 컴포넌트 정의
-function MainHomePage() {
+function mainHomePage() {
   return (
     <div>
       /* Header */
@@ -283,4 +283,4 @@ function MainHomePage() {
   );
 }
 
-export default MainHomePage;
+export default mainHomePage;

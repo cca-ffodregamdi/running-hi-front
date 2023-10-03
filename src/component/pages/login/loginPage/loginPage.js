@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./LoginPage.css";
+import "./loginPage.css";
 
-class LoginPage extends Component {
+class loginPage extends Component {
   constructor() {
     super();
     this.state = {
@@ -72,4 +72,4 @@ class LoginPage extends Component {
   }
 }
 
-export default LoginPage;
+export default loginPage;
