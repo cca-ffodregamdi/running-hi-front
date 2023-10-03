@@ -1,19 +1,12 @@
-import React from 'react';
-import './notFoundPage.css'; 
-import './SpoqaHanSansNeo.css';
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
 
-function NotFoundPage() {
+export default function notFoundPage() {
   return (
-    <main className="bsod container">
-      <h1 className="neg title"><span className="bg">Error - 404</span></h1>
-      <p>An error has occurred, to continue:</p>
-      <p>* Return to our homepage.<br />
-      * Send us an e-mail about this error and try later.</p>
-      <nav className="nav">
-        <a href="#" className="link">go to homepage</a>&nbsp;|&nbsp;<a href="#" className="link">Q & A</a>
-      </nav>
-    </main>
+    <View>
+      <Text>notFoundPage</Text>
+    </View>
   );
 }
 
-export default NotFoundPage;
+const styles = StyleSheet.create({});

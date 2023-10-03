@@ -1,14 +1,12 @@
-// import React from 'react';
-// import styled from 'styled-components';
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import './loginPage.css';
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
 
+export default function loginPage() {
+  return (
+    <View>
+      <Text>loginPage</Text>
+    </View>
+  );
+}
 
-// // 로그인 컴포넌트 정의
-// function LOGIN() {
-//     return (
-//         <div>
-
-//         </div>
-//     )
-// }
+const styles = StyleSheet.create({});
