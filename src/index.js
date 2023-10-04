@@ -4,8 +4,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import "./index.css";
-import store from "./store";
-import rootReducer from "./modules";
 
 // Redux 관련 불러오기
 import { Provider } from "react-redux";

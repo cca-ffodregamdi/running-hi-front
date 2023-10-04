@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./layout/Layout";
+import Layout from "./layout/layout";
 import MainHomePage from "./component/pages/main/mainHomePage/mainHomePage";
 import LoginPage from "./component/pages/login/loginPage/loginPage";
 // 임시 이미지 업로드

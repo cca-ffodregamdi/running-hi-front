@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import { persistReducer } from "redux-persist";
-import user from "./user";
+import user from "./userModule";
 import storage from "store/storages/cookieStorage";
 
 const persistConfig = {
