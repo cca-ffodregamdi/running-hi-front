@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import user from "./modules/user";
+import userModule from "./modules/userModule";
 import thunk from "redux-thunk";
 import logger from "redux-logger";
 
 export default configureStore({
   reducer: {
-    user,
+    userModule,
   },
   middleware: [thunk, logger],
 });

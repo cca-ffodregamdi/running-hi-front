@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import "./loginPage.css";
+import axios from "axios";
 
-class loginPage extends Component {
+class LoginPage extends Component {
   constructor() {
     super();
     this.state = {
-      username: "",
+      account: "",
       password: "",
     };
   }
@@ -16,17 +17,30 @@ class loginPage extends Component {
     });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
-    const { username, password } = this.state;
-    console.log("Username:", username);
-    console.log("Password:", password);
+    const { account, password } = this.state;
+    console.log("account:", account);
+    console.log("password:", password);
 
-    if (username === "user" && password === "password") {
-      this.setState({ isLoggedIn: true }); // 로그인 성공 시 상태 업데이트
-    } else {
-      alert("로그인에 실패하였습니다.");
-    }
+    axios
+      .post("http://localhost:8080/api/v1/sign-in", this.state)
+      .then(function (resp) {
+        console.log(resp.data);
+        if (account !== null && password !== null) {
+          // this.setState({ isLoggedIn: true });
+          alert("로그인 성공!");
+        }
+      })
+      .catch(function (err) {
+        alert(err);
+      });
+
+    // if (account === "account" && password === "password") {
+    //   this.setState({ isLoggedIn: true }); // 로그인 성공 시 상태 업데이트
+    // } else {
+    //   alert("로그인에 실패하였습니다.");
+    // }
   };
 
   render() {
@@ -42,12 +56,12 @@ class loginPage extends Component {
         <h1>Login</h1>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor="username"> </label>
+            <label htmlFor="account"> </label>
             <input
               type="text"
               placeholder="아이디를 입력하세요."
-              name="username"
-              value={this.state.username}
+              name="account"
+              value={this.state.account}
               onChange={this.handleInputChange}
             />
           </div>
@@ -72,4 +86,4 @@ class loginPage extends Component {
   }
 }
 
-export default loginPage;
+export default LoginPage;
