@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function categoryManagementPage() {
-  return (
-    <View>
-      <Text>categoryManagementPage</Text>
-    </View>
-  );
+export default class categoryManagementPage extends Component {
+  render() {
+    return <div>categoryManagementPage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});

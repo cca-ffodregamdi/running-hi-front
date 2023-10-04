@@ -1,24 +1,10 @@
-/*  전체 설정  */
-html {
+전체 설정 html {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
   background-color: #fff;
 }
 
 body {
   background-color: #fff;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #fff;
-  text-align: center;
-  margin-left: 70px;
-  margin-top: -200px;
-  position: absolute;
-  /* width: 1920px; */
 }
 
 .logo a {
@@ -101,12 +87,13 @@ ol a:hover {
 
 .mainletter h3 {
   text-align: center;
-  margin-top: 250px;
+  margin-top: 200px;
   font-size: 30px;
   padding-top: 120px;
-  letter-spacing: -5px;
-  font-weight: 400;
-  margin-bottom: -50px;
+  letter-spacing: -6px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: -10px;
 }
 
 .mainletter h1 {
@@ -125,9 +112,8 @@ ol a:hover {
   font-weight: 300;
   text-align: center;
   font-size: 16px;
-
-  margin-bottom: 200px;
-  margin-left: 800px;
+  margin-bottom: 350px;
+  margin-left: 915px;
   padding: 6px 15px;
   border-inline-color: #000;
   border-radius: 5px;
@@ -139,7 +125,7 @@ ol a:hover {
 
 .mapbtn:hover {
   background-color: #d9d9d9;
-  letter-spacing: -4px;
+  letter-spacing: -3.5px;
   font-weight: 800;
 }
 
@@ -238,6 +224,7 @@ h2.line-title {
   position: relative;
   font-size: 32px;
   width: 400px;
+  color: #000;
 }
 
 h2.line-title::before,

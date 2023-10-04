@@ -1,0 +1,33 @@
+.productimgBox .imgBox {
+  /* display: inline;
+  width: 100%;
+  min-height: 300px;
+  border: 2px dashed #ccc;
+  text-align: center; */
+  padding: 25% !important;
+}
+
+.imgBox {
+  padding: 20%;
+  margin: 0;
+}
+
+.product_img {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.product_img div,
+.product_img li {
+  padding: 8px;
+  position: relative;
+}
+
+.product_img button {
+  border: none;
+  position: absolute;
+  background-color: transparent;
+  right: 10px;
+  top: 10px;
+}

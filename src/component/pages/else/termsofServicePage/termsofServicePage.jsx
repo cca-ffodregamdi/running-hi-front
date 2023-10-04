@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function termsofServicePage() {
-  return (
-    <View>
-      <Text>termsofServicePage</Text>
-    </View>
-  );
+export default class termsofServicePage extends Component {
+  render() {
+    return <div>termsofServicePage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});

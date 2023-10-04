@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function adminPage() {
-  return (
-    <View>
-      <Text>adminPage</Text>
-    </View>
-  );
+export default class adminPage extends Component {
+  render() {
+    return <div>adminPage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});

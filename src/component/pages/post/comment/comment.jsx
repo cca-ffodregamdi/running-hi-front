@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function comment() {
-  return (
-    <View>
-      <Text>comment</Text>
-    </View>
-  );
+export default class comment extends Component {
+  render() {
+    return <div>comment</div>;
+  }
 }
-
-const styles = StyleSheet.create({});

@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function reportManagementPage() {
-  return (
-    <View>
-      <Text>reportManagementPage</Text>
-    </View>
-  );
+export default class reportManagementPage extends Component {
+  render() {
+    return <div>reportManagementPage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});
