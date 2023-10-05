@@ -10,10 +10,11 @@
 
 .footer .rectangle-2 {
   background-color: #0a1931;
-  height: 360px;
+  height: 300px;
+  top: 20px;
   left: 0;
   position: absolute;
-  margin-top: 50px;
+  margin-top: 40px;
   width: 1920px;
 }
 
@@ -28,22 +29,22 @@
 
 .footer .text-wrapper-5 {
   /* color: #ffffff; */
-  font-family: "Inter", Helvetica;
-  font-size: 50px;
+  font-family: "Inter";
+  font-size: 40px;
   font-weight: 700;
   height: 37px;
-  left: 170px;
+  left: 140px;
   letter-spacing: -3.6px;
-  /* line-height: normal; */
+  font-style: italic;
   position: absolute;
   text-align: center;
-  top: 90px;
+  top: 100px;
   white-space: nowrap;
   width: 330px;
 }
 
 .footer .text-wrapper-6 {
-  font-family: "Inter", Helvetica;
+  font-family: "Inter";
   font-size: 20px;
   font-weight: 700;
   height: 24px;
@@ -145,14 +146,12 @@
 }
 
 .footer .text-wrapper-12 {
-  /* color: #ffffff; */
   font-family: "Inter", Helvetica;
   font-size: 20px;
   font-weight: 700;
   height: 24px;
   left: 1100px;
   letter-spacing: -1.2px;
-  /* line-height: normal; */
   position: absolute;
   text-align: center;
   top: 255px;
@@ -160,7 +159,6 @@
 }
 
 .footer .text-wrapper-13 {
-  /* color: #ffffff; */
   font-family: "Inter", Helvetica;
   font-size: 20px;
   font-weight: 700;
@@ -171,20 +169,19 @@
   position: absolute;
   text-align: center;
   top: 290px;
-  white-space: nowrap;
 }
 
 .footer .RUNNINGHI-all-right {
   color: transparent;
   font-family: "Inter", Helvetica;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 900;
-  left: 170px;
+  left: 190px;
   letter-spacing: -0.9px;
-  /* line-height: normal; */
+
   position: absolute;
   text-align: center;
-  top: 370px;
+  top: 362px;
   width: 374px;
 }
 
@@ -199,14 +196,13 @@
 .footer .designed-by {
   color: transparent;
   font-family: "Inter", Helvetica;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
-  left: 1025px;
+  left: 1045px;
   letter-spacing: -0.9px;
-
   position: absolute;
   text-align: center;
-  top: 370px;
+  top: 368px;
   width: 374px;
 }
 

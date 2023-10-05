@@ -1,6 +1,5 @@
 import "./header.css";
 import React from "react";
-// import { RunningHi } from "./RunningHi";
 
 export const Header = () => {
   return (
@@ -14,13 +13,8 @@ export const Header = () => {
       </p>
       <div className="div">ABOUT</div>
       <div className="text-wrapper-3">
-        ㅡ<br />ㅡ<br />ㅡ {/* svg 파일로 변경 */}
+        ㅡ<br />ㅡ<br />ㅡ{/* svg 파일로 변경 */}
       </div>
-      {/* <RunningHi
-        className="RUNNING-HI-instance"
-        divClassName="design-component-instance-node"
-        text="RUNNINGHI"
-      /> */}
     </div>
   );
 };

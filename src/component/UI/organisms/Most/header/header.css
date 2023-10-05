@@ -4,13 +4,27 @@
   width: 1920px;
 }
 
+.component .LOGO {
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 150px;
+  letter-spacing: -3px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  width: 129px;
+}
+
 .component .LOGIN {
   color: #000000;
   font-family: "Inter-Regular", Helvetica;
   font-size: 25px;
   font-weight: 400;
   /* height: 46px; */
-  left: 1004px;
+  left: 1300px;
   letter-spacing: -2.38px;
   line-height: normal;
   position: absolute;
@@ -37,7 +51,7 @@
   font-style: italic;
   font-weight: 400;
   height: 49px;
-  left: 889px;
+  left: 1500px;
   letter-spacing: -2.38px;
   line-height: normal;
   position: absolute;
@@ -53,7 +67,7 @@
   font-style: italic;
   font-weight: 900;
   height: 29px;
-  left: 1165px;
+  left: 1700px;
   letter-spacing: -2.85px;
   line-height: 8.3px;
   position: absolute;
