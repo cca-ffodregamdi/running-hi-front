@@ -1,8 +1,8 @@
 import React from "react";
 import "./mainHomePage.css";
 
-import { Header } from "../../../UI/organisms/Most/header/header";
-import { Footer } from "../../../UI/organisms/Most/footer/footer";
+import { Header } from "../../../UI/organisms/Header/header";
+import { Footer } from "../../../UI/organisms/Footer/footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // App 컴포넌트 정의

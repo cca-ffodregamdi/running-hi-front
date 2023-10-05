@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ImgUpload from "../UI/ImageUpload/imageUpload";
+import ImgUpload from "../UI/organisms/ImageUpload/imageUpload";
 
 const imageUploadPage = () => {
   const [imgList, setImgList] = useState([]);
