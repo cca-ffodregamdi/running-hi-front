@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./layout/Layout";
 import AllRouters from "./Router/allRouters";
+// 임시 이미지 업로드
 import ImageUploadPage from "./component/pages/imageUploadPage";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+         <Route exact path="/" element={<Layout />}>
             <Route path="/" element={<AllRouters />} />
             {/* 임시 이미지 업로드 */}
             <Route path="/imgUpload" element={<ImageUploadPage />} />
