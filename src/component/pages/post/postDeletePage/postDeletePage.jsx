@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function postDeletePage() {
-  return (
-    <View>
-      <Text>postDeletePage</Text>
-    </View>
-  );
+export default class postDeletePage extends Component {
+  render() {
+    return <div>postDeletePage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});

@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function myFeedPage() {
-  return (
-    <View>
-      <Text>myFeedPage</Text>
-    </View>
-  );
+export default class myFeedPage extends Component {
+  render() {
+    return <div>myFeedPage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});

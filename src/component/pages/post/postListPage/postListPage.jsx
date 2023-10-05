@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function postListPage() {
-  return (
-    <View>
-      <Text>postListPage</Text>
-    </View>
-  );
+export default class postListPage extends Component {
+  render() {
+    return <div>postListPage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});

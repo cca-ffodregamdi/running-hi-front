@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function notFoundPage() {
-  return (
-    <View>
-      <Text>notFoundPage</Text>
-    </View>
-  );
+export default class notFoundPage extends Component {
+  render() {
+    return <div>notFoundPage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});

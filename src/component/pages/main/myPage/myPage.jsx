@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function myPage() {
-  return (
-    <View>
-      <Text>myPage</Text>
-    </View>
-  );
+export default class myPage extends Component {
+  render() {
+    return <div>myPage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});

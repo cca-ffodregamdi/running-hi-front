@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function postEditPage() {
-  return (
-    <View>
-      <Text>postEditPage</Text>
-    </View>
-  );
+export default class postEditPage extends Component {
+  render() {
+    return <div>postEditPage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});

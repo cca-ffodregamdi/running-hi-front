@@ -1,32 +1,31 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-// Main
+// Main ------------------------------------------------------------------------------------
 import MyPage from "../component/pages/main/myPage/myPage";
 import MyFeedPage from "../component/pages/main/myFeedPage/myFeedPage";
 import MainHomePage from "../component/pages/main/mainHomePage/mainHomePage";
 
-// Login
+// Login -----------------------------------------------------------------------------------
 import LoginPage from "../component/pages/login/loginPage/loginPage";
 import FindIdPage from "../component/pages/login/findIdPage/findIdPage";
 import FindPwPage from "../component/pages/login/findPwPage/findPwPage";
 import SignUpPage from "../component/pages/login/signUpPage/signUpPage";
 
-// Else
+// Else -------------------------------------------------------------------------------------
 import NotFoundPage from "../component/pages/else/notFoundPage/notFoundPage";
 import TermsofServicePage from "../component/pages/else/termsofServicePage/termsofServicePage";
 import CustomerSupportPage from "../component/pages/else/customerSupportPage/customerSupportPage";
 import CustomerFeedbackPage from "../component/pages/else/customerFeedbackPage/customerFeedbackPage";
 
-// Admin
+// Admin ------------------------------------------------------------------------------------
 import AdminPage from "../component/pages/admin/adminPage/adminPage";
 import DashBoardPage from "../component/pages/admin/dashBoardPage/dashBoardPage";
 import TagManagementPage from "../component/pages/admin/tagManagementPage/tagManagementPage";
 import ReportManagementPage from "../component/pages/admin/reportManagementPage/reportManagementPage";
 import CategoryManagementPage from "../component/pages/admin/categoryManagementPage/categoryManagementPage";
 
-// Post
+// Post --------------------------------------------------------------------------------------
 import Comment from "../component/pages/post/comment/comment";
 import PostEditPage from "../component/pages/post/postEditPage/postEditPage";
 import PostListPage from "../component/pages/post/postListPage/postListPage";
@@ -38,10 +37,13 @@ const AllRouters = () => {
   return (
     <>
       <Routes>
+        <Route path="/" element={<MainHomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
+
         {/* Main 관련 Routes */}
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/myfeed" element={<MyFeedPage />} />
-        <Route path="/mainhome" element={<MainHomePage />} />
+        <Route path="/main" element={<MainHomePage />} />
 
         {/* Login 관련 Routes */}
         <Route path="/login" element={<LoginPage />} />
@@ -68,7 +70,6 @@ const AllRouters = () => {
         />
 
         {/* Else 관련 Routes */}
-        <Route path="/notfound" element={<NotFoundPage />} />
         <Route path="/termsofservice" element={<TermsofServicePage />} />
         <Route path="/customersupport" element={<CustomerSupportPage />} />
         <Route path="/customerfeedback" element={<CustomerFeedbackPage />} />

@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function findIdPage() {
-  return (
-    <View>
-      <Text>findIdPage</Text>
-    </View>
-  );
+export default class findIdPage extends Component {
+  render() {
+    return <div>findIdPage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});
