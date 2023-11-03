@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./imageUpload.css";
+import "../../../../assets/scss/ui/organisms/imageUpload.scss";
 
 function ImgUpload({ max, setImgList }) {
   const [previewImages, setPreviewImages] = useState([]);
