@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 // Main ------------------------------------------------------------------------------------
 import MyPage from "../component/pages/main/myPage/myPage";
+import KakaoMap from "../component/pages/main/kakaoMap/kakaoMap";
 import MyFeedPage from "../component/pages/main/myFeedPage/myFeedPage";
 import MainHomePage from "../component/pages/main/mainHomePage/mainHomePage";
 
@@ -23,7 +24,7 @@ import AdminPage from "../component/pages/admin/adminPage/adminPage";
 import DashBoardPage from "../component/pages/admin/dashBoardPage/dashBoardPage";
 import TagManagementPage from "../component/pages/admin/tagManagementPage/tagManagementPage";
 import ReportManagementPage from "../component/pages/admin/reportManagementPage/reportManagementPage";
-import CategoryManagementPage from "../component/pages/admin/categoryManagementPage/categoryManagementPage";
+// import CategoryManagementPage from "../component/pages/admin/categoryManagementPage/categoryManagementPage";
 
 // Post --------------------------------------------------------------------------------------
 import Comment from "../component/pages/post/comment/comment";
@@ -44,6 +45,7 @@ const AllRouters = () => {
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/myfeed" element={<MyFeedPage />} />
         <Route path="/main" element={<MainHomePage />} />
+        <Route path="/location" element={<KakaoMap />} />
 
         {/* Login 관련 Routes */}
         <Route path="/login" element={<LoginPage />} />
@@ -64,10 +66,10 @@ const AllRouters = () => {
         <Route path="/dashboard" element={<DashBoardPage />} />
         <Route path="/tagmanagement" element={<TagManagementPage />} />
         <Route path="/reportmanagement" element={<ReportManagementPage />} />
-        <Route
+        {/* <Route
           path="/categorymanagement"
           element={<CategoryManagementPage />}
-        />
+        /> */}
 
         {/* Else 관련 Routes */}
         <Route path="/termsofservice" element={<TermsofServicePage />} />

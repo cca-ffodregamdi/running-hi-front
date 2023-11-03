@@ -1,0 +1,123 @@
+@mixin button-hover {
+  &:hover {
+    background-color: #202124;
+    color: white;
+    font-weight: 800;
+  }
+}
+
+html {
+  font-size: 50%;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+
+  body {
+    font-size: 1.6rem;
+  }
+  li {
+    list-style: none;
+  }
+
+  h2 {
+    color: #202124;
+    font-size: 1.9rem;
+    margin: 13% 0 0 0; // 상 우 하 좌
+    text-align: center;
+    letter-spacing: -5.5px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  h1 {
+    color: #202124;
+    text-align: center;
+    font-size: 3.7rem;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: -5px;
+    margin: -0.8% 1% 0 0%; // 상 우 하 좌
+  }
+
+  btn-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button {
+    margin: 0.5% 0 0 0;
+    padding: 0.2% 1% 0.2% 1%; // 상 우 하 좌
+    border: 1px solid #202124;
+    // background-color: #e3e1e3;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    letter-spacing: -4px;
+
+    @include button-hover;
+  }
+}
+
+// 미디어 쿼리 Zone
+
+// 01. 최대 너비가 768px 이하인 경우에 적용됩니다.
+@media screen and (max-width: 768px) {
+  .subtitle {
+    color: black;
+    font-size: 1.7rem;
+    margin: 30% 0 0 0; // 상 우 하 좌
+    text-align: center;
+    letter-spacing: -5px;
+    font-weight: "600";
+    text-decoration: none;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: -5px;
+    margin: -1% 1.5% 0 0; // 상 우 하 좌
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mapbtn {
+    margin: 2% 3% 0 0; // 상 우 하 좌
+    padding: 1% 2% 1% 2%;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    letter-spacing: -3.5px;
+  }
+}
+
+// 02. 최대 너비가 576px 이하인 경우에 적용됩니다.
+@media screen and (max-width: 576px) {
+  .subtitle {
+    color: black;
+    font-size: 1.5rem;
+    margin: 40% 0 0 0; // 상 우 하 좌
+    text-align: center;
+    // font-style: italic;
+    letter-spacing: -5px;
+    font-weight: "600";
+    text-decoration: none;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: -5px;
+    margin: -2% 2% 0 0; // 상 우 하 좌
+  }
+}
