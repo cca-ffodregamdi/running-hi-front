@@ -1,0 +1,172 @@
+body,
+html {
+  background-color: #ebecf0;
+}
+body,
+input,
+button {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  letter-spacing: -1px;
+  align-content: center;
+  &.units-01,
+  &.units-02,
+  &.units-03 {
+    margin: auto;
+    text-align: center;
+    flex-direction: row;
+    margin-top: 30px;
+    justify-content: center;
+    padding: 20px;
+    border: none;
+    margin-left: 5%;
+    margin-right: 3%;
+    &:focus {
+      box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
+    }
+  }
+}
+h4 {
+  margin-top: 100px;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  color: #004e98;
+}
+h1 {
+  font-weight: 800;
+  letter-spacing: -2px;
+  font-size: 30px;
+  text-align: center;
+  margin-top: -5px;
+  color: #004e98;
+}
+.segment {
+  line-height: 50%;
+  h2 {
+    letter-spacing: -1px;
+    color: #004e98;
+  }
+}
+input.placeholder {
+  color: #4c83b7;
+}
+div {
+  color: #babecc;
+  text-shadow: 1px 1px 1px #ffffff;
+  &.segment-icon {
+    margin-left: 100px;
+  }
+}
+form {
+  padding: 16px;
+  width: calc 16px;
+  margin: 0 auto;
+}
+.button.check-icon {
+  display: inline-block;
+}
+.segment {
+  letter-spacing: -4px;
+  padding: calc 16px;
+  text-align: center;
+  color: #004e98;
+}
+button.red {
+  border-top-width: 15px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 20px;
+  width: fit-content;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #4c83b7;
+  &:focus {
+    background-color: #004e98;
+    color: #ebebeb;
+    text-shadow: none;
+  }
+}
+button,
+input {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  border-radius: calc 16px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 160px;
+  align-content: center;
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #ffffff;
+}
+label {
+  display: block;
+  margin-bottom: calc 16px;
+  width: 100%;
+}
+input {
+  margin-right: calc 16px;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 8px;
+  &:focus {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
+  }
+  &.passwordinput {
+    margin-top: 8px;
+    margin-bottom: 30px;
+  }
+}
+button {
+  color: #61677c;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px #ffffff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  &.unit {
+    border-top-width: 15px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    align-content: end;
+    margin: 0 auto;
+    width: fit-content;
+  }
+  &.find-01 {
+    color: #a6a6a6;
+    text-shadow: none;
+    margin-top: 40px;
+    margin-left: 70px;
+    margin-right: 15px;
+    margin-left: 10px;
+    &:focus {
+      box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
+    }
+  }
+  &.find-02 {
+    color: #a6a6a6;
+    text-shadow: none;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 28px;
+    margin-left: 10px;
+    &:focus {
+      box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff;
+    }
+  }
+}
+kakao-icon {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

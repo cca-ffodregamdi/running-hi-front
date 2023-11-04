@@ -17,8 +17,7 @@ function App() {
             <Route path="/imgUpload" element={<ImageUploadPage />} />
           </Route>
         </Routes>
-      </BrowserRouter>{" "}
-      n
+      </BrowserRouter>
     </>
   );
 }
