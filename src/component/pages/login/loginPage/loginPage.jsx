@@ -1,6 +1,5 @@
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
-import "./loginPage.css";
 import axios from "axios";
 
 // // 로그인 컴포넌트 정의
@@ -12,7 +11,7 @@ import axios from "axios";
 //     )
 // }
 
-class LoginPage extends Component {
+export default class LoginPage extends Component {
   constructor() {
     super();
     this.state = {
@@ -95,5 +94,3 @@ class LoginPage extends Component {
     );
   }
 }
-
-export default LoginPage;

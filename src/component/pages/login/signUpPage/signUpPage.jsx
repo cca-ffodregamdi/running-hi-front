@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function signUpPage() {
-  return (
-    <View>
-      <Text>signUpPage</Text>
-    </View>
-  );
+export default class signUpPage extends Component {
+  render() {
+    return <div>signUpPage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});

@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function tagManagementPage() {
-  return (
-    <View>
-      <Text>tagManagementPage</Text>
-    </View>
-  );
+export default class tagManagementPage extends Component {
+  render() {
+    return <div>tagManagementPage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});

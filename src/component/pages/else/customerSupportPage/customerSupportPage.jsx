@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function customerSupportPage() {
-  return (
-    <View>
-      <Text>customerSupportPage</Text>
-    </View>
-  );
+export default class customerSupportPage extends Component {
+  render() {
+    return <div>customerSupportPage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});

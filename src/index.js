@@ -1,7 +1,8 @@
 // index.js
 import App from "./App";
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
+import store from "./store";
 
 import "./index.css";
 
@@ -9,22 +10,23 @@ import "./index.css";
 import { Provider } from "react-redux";
 import rootReducer from "./modules";
 import { persistStore } from "redux-persist";
-import store from "./store";
+import { PersistGate } from "redux-persist/integration/react";
 
+// Helmet 관련 불러오기
+import { HelmetProvider } from "react-helmet-async";
+
+const persistor = persistStore(store); // redux store 생성
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-const persistor = persistStore(store);
-
 root.render(
-  // <HelmetProvider>
-  <React.StrictMode>
-    <Provider store={store}>
-      {/* <PersistGate persistor={persistor}> */}
-      <App />
-      {/* </PersistGate> */}
-    </Provider>
-  </React.StrictMode>
-  // </HelmetProvider>
+  <HelmetProvider>
+    <React.StrictMode>
+      <Provider store={store}>
+        {/* <PersistGate persistor={persistor}> */}
+        <App />
+        {/* </PersistGate> */}
+      </Provider>
+    </React.StrictMode>
+  </HelmetProvider>
 );
 
 export default store;

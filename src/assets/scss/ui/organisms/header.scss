@@ -1,0 +1,113 @@
+*,
+*::after,
+*::before {
+  margin: 0; // 상 - 우 - 하 - 좌
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+
+  body {
+    font-size: 1.6rem;
+    background-color: #fefefe;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: darkgray;
+    // font-style: italic;
+    margin: 0 0 5px 0;
+  }
+  i {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: -2px;
+    font-size: 1.7rem;
+    font-style: italic;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  margin: 1.5% 1.5% 0 1.5%; // 상 우 하 좌
+  background-color: black;
+
+  &_brand {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+  }
+
+  &_toggler div {
+    width: 2.5rem;
+    height: 0.1rem;
+    margin: 0.4rem;
+    background-color: white;
+    transition: 0.4s ease-in;
+  }
+
+  &_toggler {
+    cursor: pointer;
+    display: none;
+  }
+}
+
+// --------------------------------------------------------------
+@media screen and (max-width: 768px) {
+  .header_toggler {
+    display: block;
+  }
+
+  .header_menu {
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    width: 40%;
+    height: 93vh;
+    letter-spacing: -1.5px;
+    background-color: black;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+  }
+
+  .toggle div {
+    width: 2rem;
+    height: 0.2rem;
+    margin: 0.3rem;
+    background-color: white;
+    transition: 0.4s ease-in;
+  }
+
+  // Header Active Class
+  .header_active {
+    transform: translateX(0);
+    margin: 0 1.5% 0 0; // 상 - 우 - 하 - 좌
+  }
+
+  // Toggler Icon Animation
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5.5px, 7px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-4px, -5px);
+  }
+}

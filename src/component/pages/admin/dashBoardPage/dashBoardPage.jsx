@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function dashBoardPage() {
-  return (
-    <View>
-      <Text>dashBoardPage</Text>
-    </View>
-  );
+export default class dashBoardPage extends Component {
+  render() {
+    return <div>dashBoardPage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});

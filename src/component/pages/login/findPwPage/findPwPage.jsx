@@ -1,12 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { Component } from "react";
 
-export default function findPwPage() {
-  return (
-    <View>
-      <Text>findPwPage</Text>
-    </View>
-  );
+export default class findPwPage extends Component {
+  render() {
+    return <div>findPwPage</div>;
+  }
 }
-
-const styles = StyleSheet.create({});
