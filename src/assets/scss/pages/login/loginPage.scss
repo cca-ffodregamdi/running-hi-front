@@ -16,9 +16,9 @@ div.logoname {
   letter-spacing: -5px;
 }
 
-btn.opacity {
+button.opacity {
   text-align: center;
-  background-color: #294da9;
+  background-color: black;
   color: white;
   display: block;
   padding: 2% 0 2.5% 0; // 상 우 하 좌
@@ -33,8 +33,6 @@ btn.opacity {
 
   &:hover {
     font-weight: bold;
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
-    transform: scale(1.02);
   }
 }
 

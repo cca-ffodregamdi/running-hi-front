@@ -5,7 +5,9 @@ function Footer() {
   return (
     <footer className="footer">
       <div>
-        <i className="logo">RUNNINGHI</i>
+        <a href="/" className="logo">
+          RUNNINGHI
+        </a>
       </div>
 
       <ul className="footer_list">

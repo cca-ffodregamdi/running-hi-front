@@ -1,0 +1,106 @@
+div.signup {
+  margin: 10% 0 0 0; // 상 우 하 좌
+  text-align: center;
+  letter-spacing: 10px;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+div.logoname {
+  color: black;
+  margin: -3% 0 10% 0; // 상 우 하 좌
+  font-size: 3.5rem;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+
+form input {
+  text-align: center;
+  border-radius: 50px;
+  display: block;
+  padding: 3%;
+  width: 100%;
+  margin: 2rem 0;
+  background-color: #9191911f;
+  border: none;
+  font-weight: 400;
+  letter-spacing: -1px;
+  font-size: 1rem;
+  backdrop-filter: blur(15px);
+
+  &:focus {
+    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+    animation: wobble 0.3s ease-in;
+  }
+}
+
+button.opacity {
+  text-align: center;
+  background-color: black;
+  color: white;
+  display: block;
+  padding: 2% 0 2.5% 0; // 상 우 하 좌
+  border-radius: 50px;
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+  width: 40%;
+  cursor: pointer;
+  margin: 5% 0 15% 30%; // 상 우 하 좌
+  transition: all 0.1s ease-in-out;
+  border: none;
+
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.info #info__id {
+  position: relative;
+}
+
+#info__id button.nestedcheck {
+  position: absolute;
+  font-size: 1rem;
+  text-align: center;
+  width: 14%;
+  height: 4.5%;
+  padding: 0 1% 0 0;
+  margin: -13.3% 0 0 72%;
+  border-radius: 30px;
+}
+
+.info #info__nickname {
+  position: relative;
+}
+
+#info__nickname button.nestedchecknick {
+  position: absolute;
+  font-size: 1rem;
+  text-align: center;
+  width: 14%;
+  height: 4.5%;
+  padding: 0 1% 0 0;
+  margin: -13.3% 0 0 72%;
+  border-radius: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-container {
+  position: relative;
+  width: 35rem;
+
+  .form-container {
+    border: 1px solid hsla(0, 0%, 65%, 0.158);
+    box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    z-index: 99; // 맨 앞으로 돌출되도록!
+    padding: 2rem;
+  }
+}

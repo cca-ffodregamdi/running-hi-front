@@ -73,10 +73,11 @@ export default class LoginPage extends Component {
                 name="password"
                 value={this.state.password}
                 onChange={this.handleInputChange}
+                autoComplete="off"
               />
-              <btn className="opacity" type="submit">
+              <button className="opacity" type="submit">
                 로그인
-              </btn>
+              </button>
             </form>
             <div className="register">
               <div className="signupletter">아직 회원이 아니신가요?</div>
