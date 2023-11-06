@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Layout from "../layout/Layout";
 
 // Main ------------------------------------------------------------------------------------
 import MyPage from "../component/pages/main/myPage/myPage";
@@ -38,43 +39,45 @@ const AllRouters = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<MainHomePage />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route exact path="/" element={<Layout />}>
+          <Route path="/" element={<MainHomePage />} />
+          <Route path="*" element={<NotFoundPage />} />
 
-        {/* Main 관련 Routes */}
-        <Route path="/mypage" element={<MyPage />} />
-        <Route path="/myfeed" element={<MyFeedPage />} />
-        <Route path="/main" element={<MainHomePage />} />
-        <Route path="/location" element={<KakaoMap />} />
+          {/* Main 관련 Routes */}
+          <Route path="/mypage" element={<MyPage />} />
+          <Route path="/myfeed" element={<MyFeedPage />} />
+          <Route path="/main" element={<MainHomePage />} />
+          <Route path="/location" element={<KakaoMap />} />
 
-        {/* Login 관련 Routes */}
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/findpw" element={<FindPwPage />} />
-        <Route path="/findid" element={<FindIdPage />} />
+          {/* Login 관련 Routes */}
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/findpw" element={<FindPwPage />} />
+          <Route path="/findid" element={<FindIdPage />} />
 
-        {/* Post 관련 Routes */}
-        <Route path="/comment" element={<Comment />} />
-        <Route path="/postedit" element={<PostEditPage />} />
-        <Route path="/postlist" element={<PostListPage />} />
-        <Route path="/postcreate" element={<PostCreatePage />} />
-        <Route path="/postdelete" element={<PostDeletePage />} />
-        <Route path="/postdetail" element={<PostDetailPage />} />
+          {/* Post 관련 Routes */}
+          <Route path="/comment" element={<Comment />} />
+          <Route path="/postedit" element={<PostEditPage />} />
+          <Route path="/postlist" element={<PostListPage />} />
+          <Route path="/postcreate" element={<PostCreatePage />} />
+          <Route path="/postdelete" element={<PostDeletePage />} />
+          <Route path="/postdetail" element={<PostDetailPage />} />
 
-        {/* Admin 관련 Routes */}
-        <Route path="/admin" element={<AdminPage />} />
-        <Route path="/dashboard" element={<DashBoardPage />} />
-        <Route path="/tagmanagement" element={<TagManagementPage />} />
-        <Route path="/reportmanagement" element={<ReportManagementPage />} />
-        {/* <Route
+          {/* Admin 관련 Routes */}
+          <Route path="/admin" element={<AdminPage />} />
+          <Route path="/dashboard" element={<DashBoardPage />} />
+          <Route path="/tagmanagement" element={<TagManagementPage />} />
+          <Route path="/reportmanagement" element={<ReportManagementPage />} />
+          {/* <Route
           path="/categorymanagement"
           element={<CategoryManagementPage />}
         /> */}
 
-        {/* Else 관련 Routes */}
-        <Route path="/termsofservice" element={<TermsofServicePage />} />
-        <Route path="/customersupport" element={<CustomerSupportPage />} />
-        <Route path="/customerfeedback" element={<CustomerFeedbackPage />} />
+          {/* Else 관련 Routes */}
+          <Route path="/termsofservice" element={<TermsofServicePage />} />
+          <Route path="/customersupport" element={<CustomerSupportPage />} />
+          <Route path="/customerfeedback" element={<CustomerFeedbackPage />} />
+        </Route>
       </Routes>
     </>
   );

@@ -23,7 +23,7 @@ function KakaoMap() {
     const container = document.getElementById("map");
     const options = {
       center: new kakao.maps.LatLng(37.5665, 126.978), // 이건 카카오에서 제공하는 기본 위치값!
-      level: 3,
+      level: 1,
     };
     const map = new kakao.maps.Map(container, options);
     setMap(map);
