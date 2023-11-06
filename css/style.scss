@@ -1,20 +1,10 @@
-@import "./mixin";
-
-@mixin button-hover {
-  &:hover {
-    background-color: #202124;
-    color: white;
-    font-weight: 800;
-  }
-}
-
 *,
 *::after,
 *::before {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
   margin: 0; // 상 - 우 - 하 - 좌
   box-sizing: border-box;
 }
-
 html {
   font-size: 50%;
   scroll-behavior: smooth;

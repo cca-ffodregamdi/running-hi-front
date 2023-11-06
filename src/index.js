@@ -19,13 +19,13 @@ const persistor = persistStore(store); // redux store 생성
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <HelmetProvider>
-    <React.StrictMode>
-      <Provider store={store}>
-        {/* <PersistGate persistor={persistor}> */}
-        <App />
-        {/* </PersistGate> */}
-      </Provider>
-    </React.StrictMode>
+    {/* <React.StrictMode> */}
+    <Provider store={store}>
+      {/* <PersistGate persistor={persistor}> */}
+      <App />
+      {/* </PersistGate> */}
+    </Provider>
+    {/* </React.StrictMode> */}
   </HelmetProvider>
 );
 

@@ -13,6 +13,7 @@ import LoginPage from "../component/pages/login/loginPage/loginPage";
 import FindIdPage from "../component/pages/login/findIdPage/findIdPage";
 import FindPwPage from "../component/pages/login/findPwPage/findPwPage";
 import SignUpPage from "../component/pages/login/signUpPage/signUpPage";
+import TermsAgreePage from "../component/pages/login/signUpPage/termsAgreePage";
 
 // Else -------------------------------------------------------------------------------------
 import NotFoundPage from "../component/pages/else/notFoundPage/notFoundPage";
@@ -54,6 +55,7 @@ const AllRouters = () => {
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/findpw" element={<FindPwPage />} />
           <Route path="/findid" element={<FindIdPage />} />
+          <Route path="/termsagree" element={<TermsAgreePage />} />
 
           {/* Post 관련 Routes */}
           <Route path="/comment" element={<Comment />} />

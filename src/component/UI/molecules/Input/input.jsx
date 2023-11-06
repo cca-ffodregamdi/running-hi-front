@@ -1,8 +1,8 @@
 import React from "react";
-import CheckBtn from "./checkBtn.js";
+// import CheckBtn from "./checkBtn.js";
 import InputField from "./inputField.js";
 
-function input() {
+function Input() {
   return (
     <div>
       <checkBtn />
@@ -11,4 +11,4 @@ function input() {
   );
 }
 
-export default input;
+export default Input;

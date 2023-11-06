@@ -19,7 +19,9 @@ function Header() {
 
   return (
     <header className="header">
-      <div className="brand">RUNNINGHI</div>
+      <a href="/" className="brand">
+        RUNNINGHI
+      </a>
 
       <ul className={active}>
         <li className="header_item">
@@ -35,7 +37,7 @@ function Header() {
         </li>
 
         <li className="header_item">
-          <a href="login" className="header_link">
+          <a href="/login" className="header_link">
             Login
           </a>
         </li>

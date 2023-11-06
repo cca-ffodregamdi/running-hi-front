@@ -9,7 +9,6 @@ export default class LoginPage extends Component {
     this.state = {
       account: "",
       password: "",
-      // isLoggedIn: false,
     };
   }
 
@@ -57,11 +56,28 @@ export default class LoginPage extends Component {
         <div className="login-container">
           <div className="form-container">
             <div className="login">LOGIN</div>
-            <div className="logoname">RUNNINGHI</div>
-            <form>
-              <input type="text" placeholder="아이디를 입력해주세요" />
-              <input type="password" placeholder="비밀번호를 입력해주세요" />
-              <btn className="opacity">Login</btn>
+            <div className="logoname">
+              <a href="/">RUNNINGHI</a>
+            </div>
+            <form onSubmit={this.handleSubmit}>
+              <input
+                type="text"
+                placeholder="아이디를 입력해 주세요"
+                name="account"
+                value={this.state.account}
+                onChange={this.handleInputChange}
+              />
+              <input
+                type="password"
+                placeholder="비밀번호를 입력해 주세요"
+                name="password"
+                value={this.state.password}
+                onChange={this.handleInputChange}
+                autoComplete="off"
+              />
+              <button className="opacity" type="submit">
+                로그인
+              </button>
             </form>
             <div className="register">
               <div className="signupletter">아직 회원이 아니신가요?</div>
