@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import "../../../../../src/assets/scss/ui/organisms/header.scss";
 
 function Header() {
@@ -18,7 +19,7 @@ function Header() {
 
   return (
     <header className="header">
-      <i className="brand">RUNNINGHI</i>
+      <div className="brand">RUNNINGHI</div>
 
       <ul className={active}>
         <li className="header_item">

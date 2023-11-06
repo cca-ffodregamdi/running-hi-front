@@ -1,16 +1,7 @@
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
-import axios from "axios";
 import "../../../../../src/assets/scss/pages/login/loginPage.scss";
-
-// // 로그인 컴포넌트 정의
-// function LOGIN() {
-//     return (
-//         <div>
-
-//         </div>
-//     )
-// }
+import axios from "axios";
 
 export default class LoginPage extends Component {
   constructor() {
@@ -103,40 +94,6 @@ export default class LoginPage extends Component {
             </div>
           </div>
         </div>
-      </div>
-    );
-
-    return (
-      <div>
-        <h4>RunningHi</h4>
-        <h1>Login</h1>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <label htmlFor="account"> </label>
-            <input
-              type="text"
-              placeholder="아이디를 입력하세요."
-              name="account"
-              value={this.state.account}
-              onChange={this.handleInputChange}
-            />
-          </div>
-          <div>
-            <label htmlFor="password" aria-label="Password">
-              {" "}
-            </label>
-            <input
-              type="password"
-              placeholder="비밀번호를 입력하세요."
-              name="password"
-              value={this.state.password}
-              onChange={this.handleInputChange}
-            />
-          </div>
-          <div>
-            <button type="submit"> Login </button>
-          </div>
-        </form>
       </div>
     );
   }

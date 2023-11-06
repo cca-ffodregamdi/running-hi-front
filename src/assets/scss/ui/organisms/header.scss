@@ -23,7 +23,9 @@
     }
   }
 
-  &_brand {
+  div.brand {
+    color: #fff;
+    font-style: italic;
     text-transform: uppercase;
     font-weight: bold;
   }

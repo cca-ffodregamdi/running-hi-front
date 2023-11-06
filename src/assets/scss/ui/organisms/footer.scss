@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: row;
     gap: 60px;
-    letter-spacing: -1.5px;
+    letter-spacing: -1.7px;
     margin: -4% 0 0 10%;
 
     .footer_item {
@@ -35,6 +35,7 @@
   }
 
   .footer-bottom {
+    color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -51,6 +52,18 @@
 
 // --------------------------------------------------------------
 @media screen and (max-width: 768px) {
+  .footer {
+    height: 35vh;
+    margin: auto 1.5% 10% 1.5%; // 상 우 하 좌
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    padding: 3% 0 10% 0;
+    background-color: #000;
+    color: #fefefe;
+  }
+
   .footer .logo {
     font-size: 2.2rem;
     font-weight: bold;
