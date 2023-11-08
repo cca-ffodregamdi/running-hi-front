@@ -59,7 +59,8 @@ export default class LoginPage extends Component {
             <div className="logoname">
               <a href="/">RUNNINGHI</a>
             </div>
-            <form onSubmit={this.handleSubmit}>
+            <form className="inputinfo" onSubmit={this.handleSubmit}>
+              {/* <text>아이디</text> */}
               <input
                 type="text"
                 placeholder="아이디를 입력해 주세요"
@@ -67,6 +68,7 @@ export default class LoginPage extends Component {
                 value={this.state.account}
                 onChange={this.handleInputChange}
               />
+              {/* <text>비밀번호</text> */}
               <input
                 type="password"
                 placeholder="비밀번호를 입력해 주세요"

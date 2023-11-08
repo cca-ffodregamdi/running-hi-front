@@ -54,6 +54,13 @@ button.opacity {
     z-index: 99; // 맨 앞으로 돌출되도록!
     padding: 2rem;
   }
+  text {
+    font-size: 1.2rem;
+    display: block;
+    margin: 5% 0 -2.5% 3%; // 상 우 하 좌
+    font-weight: bold;
+    letter-spacing: -1px;
+  }
 
   form input {
     text-align: center;
@@ -79,7 +86,6 @@ button.opacity {
 div.signupletter {
   font-size: 0.8rem;
   margin: 0 0 -1.5% 0;
-  // font-weight: bold;
 }
 
 a.signup {

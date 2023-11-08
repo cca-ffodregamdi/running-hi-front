@@ -25,17 +25,15 @@ function Header() {
 
       <ul className={active}>
         <li className="header_item">
-          <a href="/" className="header_link">
-            Home
-          </a>
-        </li>
-
-        <li className="header_item">
           <a href="#" className="header_link">
             About
           </a>
         </li>
-
+        <li className="header_item">
+          <a href="/mypage" className="header_link">
+            Course
+          </a>
+        </li>
         <li className="header_item">
           <a href="/login" className="header_link">
             Login
