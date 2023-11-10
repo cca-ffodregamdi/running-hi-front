@@ -6,18 +6,54 @@
   }
 }
 
-.inputinfo {
-  color: #3e3e3e;
-  background-color: #fefefe;
-  border-radius: 5px;
+button.checkcheck {
+  position: absolute;
+  margin: -9% 0 0% 76%;
+  padding: 1% 2.5% 1% 2.5%; // 상 우 하 좌
+  border: 1.5px solid #202124;
+  background-color: #202124;
+  color: darkgray;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  letter-spacing: -1px;
+  font-weight: 100;
 
-  label {
-    font-size: 1.1rem;
-    letter-spacing: -1px;
-    display: block;
-    margin: 6% 0 -2% 2.5%; // 상 우 하 좌
-    font-weight: bold;
-  }
+  @include button-hover;
+}
+
+button.checkemail {
+  position: absolute;
+  margin: 2.7% 0 0% 73%;
+  font-size: 0.9rem;
+  padding: 2% 2.5% 2% 2.5%; // 상 우 하 좌
+  border: 1.5px solid #202124;
+  background-color: #202124;
+  color: darkgray;
+  border-radius: 30px;
+  cursor: pointer;
+  letter-spacing: -1px;
+  font-weight: 100;
+
+  @include button-hover;
+}
+
+button.checkcehck,
+button.checkemail {
+  position: absolute;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 30px;
+  background-color: #202124;
+  border: 1.5px solid #202124;
+  color: darkgray;
+}
+
+.inputinfo {
+  // color: #3e3e3e;
+  // background-color: #fefefe;
+  // border-radius: 5px;
+  // justify-content: flex-start;
 
   input {
     position: relative;
@@ -40,42 +76,323 @@
     }
   }
 
-  button.checkcheck {
+  .nec check {
     position: absolute;
-    margin: -8.8% 0 0% 70%;
-    padding: 1% 2.5% 1% 2.5%; // 상 우 하 좌
-    border: 1.5px solid #202124;
-    background-color: #202124;
-    color: darkgray;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    letter-spacing: -1px;
-    font-weight: 100;
-
-    @include button-hover;
+    justify-content: flex-start;
   }
 
-  button.checkemail {
-    position: absolute;
-    margin: -8.8% 0 0% 68%;
-    padding: 1% 2.5% 1% 2.5%; // 상 우 하 좌
-    border: 1.5px solid #202124;
-    background-color: #202124;
-    color: darkgray;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1rem;
+  text.loc_info {
+    font-size: 0.7rem;
     letter-spacing: -1px;
-    font-weight: 100;
+    color: darkgray;
+    margin: -1% 0 0 1%;
+  }
 
-    @include button-hover;
+  label {
+    font-size: 1.1rem;
+    letter-spacing: -1px;
+    margin: 6% 0 -2% 2.5%; // 상 우 하 좌
+    font-weight: bold;
+  }
+
+  text.necessary {
+    margin: 0 0 0 1%;
+    font-size: 1.1rem;
+    color: #c33434;
   }
 
   .error {
+    text-align: center;
     color: #c33434;
-    margin: -0.5% 0% 0% 3%; // 상 우 하 좌
-    font-size: 12px;
+    margin: 0.5% 0% 1% 3%; // 상 우 하 좌
+    font-size: 0.8rem;
     letter-spacing: -0.5px;
+  }
+  .erroremail {
+    text-align: left;
+    color: #c33434;
+    margin: 1.5% 0% 2% 3%; // 상 우 하 좌
+    font-size: 0.8rem;
+    letter-spacing: -0.5px;
+  }
+
+  div.email_input {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .email_id {
+    width: 40%;
+    margin: 2.5% 0 0 0;
+    padding: 0 0 0 0; // 상 우 하 좌
+  }
+  .bridge {
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    font-size: 1.4rem;
+    margin: 3.5% 0 0 35.7%;
+    padding: 0;
+  }
+
+  select.box {
+    text-align: center;
+    width: 35%;
+    height: 50px;
+    box-sizing: border-box;
+    margin: 2.5% 18% 0 0;
+    // padding: 0 2% 0 2%;
+    border-radius: 30px;
+    border: 1px solid #d9d6d6;
+    color: #383838;
+    background-color: #ffffff;
+    font-family: "Montserrat", "Pretendard", sans-serif;
+  }
+
+  option {
+    font-size: 16px;
+  }
+
+  .info .box#domain-list option {
+    font-size: 14px;
+    background-color: #ffffff;
+  }
+
+  .email_num {
+    width: 83%;
+  }
+
+  .checknum {
+    position: absolute;
+    margin: -10% 0 0% 73%;
+    font-size: 0.9rem;
+    padding: 2% 2.5% 2% 2.5%; // 상 우 하 좌
+    border: 1.5px solid #202124;
+    background-color: #fefefe;
+    color: #202124;
+    border-radius: 30px;
+    cursor: pointer;
+    letter-spacing: -1px;
+    font-weight: 100;
+
+    @include button-hover;
+  }
+  .address {
+    width: 87%;
+  }
+
+  .checkaddress {
+    position: absolute;
+    margin: -9.5% 0 0% 77%;
+    font-size: 0.9rem;
+    padding: 1.5% 2.5% 1.5% 2.5%; // 상 우 하 좌
+    border: 1.5px solid #202124;
+    background-color: #fefefe;
+    color: #202124;
+    border-radius: 30px;
+    cursor: pointer;
+    letter-spacing: -1px;
+    font-weight: 100;
+
+    @include button-hover;
+  }
+}
+
+.genderage {
+  display: flex;
+  justify-content: flex-start;
+  margin: 2.5% 0 0 2%;
+}
+
+.gender_box,
+.age_box {
+  height: 40px;
+  text-align: center;
+  border-radius: 30px;
+  border: 1.5px solid #202124;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+.gender_box {
+  width: 100%;
+}
+.age_box {
+  width: 150%;
+}
+
+.gender_input,
+.age_input {
+  margin: 0 5% 0 0;
+}
+
+// --------------------------------- Media Query Zone -----------------------------
+
+@media screen and (max-width: 1300px) {
+}
+
+@media screen and (max-width: 1000px) {
+  .inputinfo {
+    input {
+      position: relative;
+      text-align: center;
+      border-radius: 50px;
+      display: block;
+      padding: 3%;
+      width: 100%;
+      margin: 1rem 0;
+      background-color: #9191911f;
+      border: none;
+      font-weight: 400;
+      letter-spacing: -1px;
+      font-size: 1rem;
+      backdrop-filter: blur(1px);
+
+      .email_id {
+      }
+
+      &:focus {
+        box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+        animation: wobble 0.3s ease-in;
+      }
+      &::placeholder {
+        font-size: 0.8em;
+        color: #808080;
+      }
+    }
+    .error {
+      text-align: center;
+      color: #c33434;
+      margin: 0.5% 0% 1% 3%; // 상 우 하 좌
+      font-size: 0.8rem;
+      letter-spacing: -0.5px;
+    }
+    .gender_box,
+    .age_box {
+      height: 38px;
+      text-align: center;
+      border-radius: 30px;
+      border: 1.5px solid #202124;
+      font-family: "Spoqa Han Sans Neo", "sans-serif";
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inputinfo {
+    input {
+      position: relative;
+      text-align: center;
+      border-radius: 50px;
+      display: block;
+      padding: 3%;
+      width: 100%;
+      margin: 1rem 0;
+      background-color: #9191911f;
+      border: none;
+      font-weight: 400;
+      letter-spacing: -1px;
+      font-size: 1rem;
+      backdrop-filter: blur(1px);
+
+      .email_id {
+      }
+
+      &:focus {
+        box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+        animation: wobble 0.3s ease-in;
+      }
+      &::placeholder {
+        font-size: 0.7em;
+        color: #808080;
+      }
+    }
+    text.loc_info {
+      font-size: 0.6rem;
+      letter-spacing: -1px;
+      color: darkgray;
+      margin: -1% 0 0 1%;
+    }
+    .error {
+      text-align: center;
+      color: #c33434;
+      margin: -1.5% 0% 1% 0%; // 상 우 하 좌
+      font-size: 0.6rem;
+      letter-spacing: -0.5px;
+    }
+    .gender_box,
+    .age_box {
+      height: 30px;
+      text-align: center;
+      border-radius: 30px;
+      border: 1.5px solid #202124;
+      font-family: "Spoqa Han Sans Neo", "sans-serif";
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .inputinfo {
+    input {
+      position: relative;
+      text-align: center;
+      border-radius: 50px;
+      display: block;
+      padding: 3%;
+      width: 100%;
+      margin: 1rem 0;
+      background-color: #9191911f;
+      border: none;
+      font-weight: 400;
+      letter-spacing: -1px;
+      font-size: 1rem;
+      backdrop-filter: blur(1px);
+
+      .email_id {
+        margin: 0 0 0 0;
+      }
+
+      &:focus {
+        box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+        animation: wobble 0.3s ease-in;
+      }
+      &::placeholder {
+        font-size: 0.6rem;
+        color: #808080;
+      }
+    }
+    text.loc_info {
+      font-size: 0.6rem;
+      letter-spacing: -1px;
+      color: darkgray;
+      margin: -1% 0 0 1%;
+    }
+
+    label {
+      font-size: 0.8rem;
+      letter-spacing: -1px;
+      margin: 6% 0 -2% 2.5%; // 상 우 하 좌
+      font-weight: bold;
+    }
+
+    text.necessary {
+      margin: 0 0 0 1%;
+      font-size: 0.8rem;
+      color: #c33434;
+    }
+    .error {
+      text-align: center;
+      color: #c33434;
+      margin: -3% 0% 1% 0%; // 상 우 하 좌
+      font-size: 0.55rem;
+      letter-spacing: -0.5px;
+    }
+    .gender_box,
+    .age_box {
+      height: 30px;
+      text-align: center;
+      border-radius: 30px;
+      border: 1.5px solid #202124;
+      font-family: "Spoqa Han Sans Neo", "sans-serif";
+    }
   }
 }

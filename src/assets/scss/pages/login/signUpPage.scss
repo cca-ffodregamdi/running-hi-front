@@ -1,8 +1,10 @@
+/* 공통 스타일 */
+
 .signupPage {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 180vh;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
@@ -11,25 +13,212 @@
   border: 1px solid hsla(0, 0%, 65%, 0.158);
   box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(20px);
-  z-index: 99; // 맨 앞으로 돌출되도록!
+  z-index: 99; /* 맨 앞으로 돌출되도록! */
   padding: 3rem;
 }
 
-div.signup-name {
-  margin: 10% 0 1% 0; // 상 우 하 좌
+div.signup-name,
+div.signup-message {
   text-align: center;
-  letter-spacing: 15px;
-  font-size: 1.5rem;
   font-weight: 100;
+  letter-spacing: -1.7px;
+}
+
+div.signup-name {
+  margin: 10% 0 1% 0; /* 상 우 하 좌 */
+  font-size: 1.5rem;
+  letter-spacing: 15px;
 }
 
 div.signup-logoname {
   color: black;
-  // color: #294da9;
-  margin: -3% 0 2% 0; // 상 우 하 좌
+  /* color: #294da9; */
+  margin: -3% 0 5% 0; /* 상 우 하 좌 */
   font-size: 3.5rem;
   text-decoration: none;
   text-align: center;
   font-weight: bold;
   letter-spacing: -5px;
 }
+
+div.signup-message {
+  color: black;
+  /* color: #294da9; */
+  margin: 20% 0 2% 0; /* 상 우 하 좌 */
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+button.regist {
+  margin: 0% 0 10% 15%;
+  width: 70%;
+  height: 40px;
+  border-radius: 20px;
+  letter-spacing: -1px;
+  font-size: 1.1rem;
+  background-color: darkgray;
+  border: none;
+  color: #fff;
+}
+
+// ------------------- Media Query Zone ------------------
+
+@media screen and (max-width: 1300px) {
+  .signup-container {
+    width: 50%;
+    border: 1px solid hsla(0, 0%, 65%, 0.158);
+    box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    z-index: 99; /* 맨 앞으로 돌출되도록! */
+    padding: 3rem;
+  }
+
+  div.signup-name {
+    margin: 10% 0 1% 0; /* 상 우 하 좌 */
+    font-size: 1.3rem;
+    letter-spacing: 15px;
+  }
+
+  div.signup-logoname {
+    color: black;
+    /* color: #294da9; */
+    margin: -3% 0 5% 0; /* 상 우 하 좌 */
+    font-size: 3rem;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: -5px;
+  }
+}
+
+// --------------------------------------------------------------
+
+@media screen and (max-width: 1000px) {
+  .signup-container {
+    width: 60%;
+    border: 1px solid hsla(0, 0%, 65%, 0.158);
+    box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    z-index: 99; /* 맨 앞으로 돌출되도록! */
+    padding: 3rem;
+  }
+
+  div.signup-message {
+    color: black;
+    /* color: #294da9; */
+    margin: 20% 0 2% 0; /* 상 우 하 좌 */
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+  button.regist {
+    margin: 0% 0 10% 10%;
+    width: 80%;
+    height: 40px;
+    border-radius: 20px;
+    letter-spacing: -1px;
+    font-size: 1.1rem;
+    background-color: darkgray;
+    border: none;
+    color: #fff;
+  }
+}
+
+// --------------------------------------------------------------
+
+@media screen and (max-width: 768px) {
+  div.signup-name {
+    margin: 10% 0 1% 0; /* 상 우 하 좌 */
+    font-size: 1rem;
+    letter-spacing: 15px;
+  }
+
+  div.signup-logoname {
+    color: black;
+    /* color: #294da9; */
+    margin: -3% 0 5% 0; /* 상 우 하 좌 */
+    font-size: 2.8rem;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: -5px;
+  }
+  .signup-container {
+    width: 60%;
+    border: 1px solid hsla(0, 0%, 65%, 0.158);
+    box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    z-index: 99; /* 맨 앞으로 돌출되도록! */
+    padding: 3.5rem;
+  }
+
+  div.signup-message {
+    color: black;
+    /* color: #294da9; */
+    margin: 20% 0 1% 0; /* 상 우 하 좌 */
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  button.regist {
+    margin: 0% 0 10% 10%;
+    width: 80%;
+    height: 30px;
+    border-radius: 20px;
+    letter-spacing: -1px;
+    font-size: 1.1rem;
+    background-color: darkgray;
+    border: none;
+    color: #fff;
+  }
+}
+
+// --------------------------------------------------------------
+
+@media screen and (max-width: 600px) {
+  div.signup-name {
+    margin: 10% 0 1% 0; /* 상 우 하 좌 */
+    font-size: 0.8rem;
+    letter-spacing: 15px;
+  }
+
+  div.signup-logoname {
+    color: black;
+    /* color: #294da9; */
+    margin: -3% 0 5% 0; /* 상 우 하 좌 */
+    font-size: 2.5rem;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: -5px;
+  }
+  .signup-container {
+    width: 70%;
+    border: 1px solid hsla(0, 0%, 65%, 0.158);
+    box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    z-index: 99; /* 맨 앞으로 돌출되도록! */
+    padding: 3.5rem;
+  }
+
+  div.signup-message {
+    color: black;
+    margin: 20% 0 -1% 0; /* 상 우 하 좌 */
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+
+  button.regist {
+    margin: 0% 0 10% 15%;
+    width: 70%;
+    height: 30px;
+    border-radius: 20px;
+    letter-spacing: -1px;
+    font-size: 1rem;
+    background-color: darkgray;
+    border: none;
+    color: #fff;
+  }
+}
+
+// --------------------------------------------------------------

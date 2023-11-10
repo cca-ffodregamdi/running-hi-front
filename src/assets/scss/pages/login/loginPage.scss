@@ -1,3 +1,5 @@
+// 최상단 --------------------------------------------------------------------
+
 div.login {
   margin: 10% 0 0 0; // 상 우 하 좌
   text-align: center;
@@ -15,6 +17,8 @@ div.logoname {
   font-weight: bold;
   letter-spacing: -5px;
 }
+
+// --------------------------------------------------------------------------
 
 button.opacity {
   text-align: center;
@@ -128,4 +132,175 @@ a.findpw {
   letter-spacing: -2px;
   gap: 100px;
   justify-content: space-between;
+}
+
+//  media query zone ---------------------------------------------------------
+
+@media screen and (max-width: 768px) {
+  div.login,
+  div.logoname {
+    color: black;
+    text-align: center;
+  }
+
+  div.login {
+    margin: 10% 0 0 0; // 상 우 하 좌
+    letter-spacing: 10px;
+    font-size: 1rem;
+    font-weight: 100;
+  }
+  div.logoname {
+    margin: -3% 0 10% 0; // 상 우 하 좌
+    font-size: 3rem;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: -5px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .login-container {
+    position: relative;
+    width: 30rem;
+  }
+
+  button.opacity {
+    text-align: center;
+    background-color: black;
+    color: darkgray;
+    display: block;
+    padding: 1% 0 1.2% 0; // 상 우 하 좌
+    border-radius: 50px;
+    font-size: 1rem;
+    letter-spacing: -2px;
+    width: 30%;
+    cursor: pointer;
+    margin: 5% 0 7% 36%; // 상 우 하 좌
+    transition: all 0.1s ease-in-out;
+    border: none;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  div.signupletter {
+    font-size: 0.7rem;
+    margin: 0 0 -1.5% 0;
+  }
+
+  a.signup {
+    font-size: 1.2rem;
+    margin: -5% 0 0 0; // 상 우 하 좌
+    text-decoration: underline;
+    &:hover {
+      font-weight: 600;
+      transform: scale(1.02);
+    }
+  }
+}
+
+/*  -------------------- media query 576px --------------------- */
+
+@media screen and (max-width: 576px) {
+  div.login,
+  div.logoname {
+    color: black;
+    text-align: center;
+  }
+
+  div.login {
+    margin: 10% 0 0 0; // 상 우 하 좌
+    letter-spacing: 10px;
+    font-size: 0.8rem;
+    font-weight: 100;
+  }
+  div.logoname {
+    margin: -3% 0 10% 0; // 상 우 하 좌
+    font-size: 2.3rem;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: -5px;
+  }
+
+  .container {
+    dislay: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .login-container {
+    position: relative;
+    width: 18rem;
+
+    inputinfo {
+      font-size: 0.7rem;
+    }
+
+    form input {
+      text-align: center;
+      border-radius: 50px;
+      display: block;
+      padding: 5%;
+      width: 100%;
+      margin: 1rem 0;
+      background-color: #9191911f;
+      border: none;
+      font-weight: 400;
+      letter-spacing: -1px;
+      font-size: 0.7rem;
+      backdrop-filter: blur(15px);
+
+      &:focus {
+        box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+        animation: wobble 0.3s ease-in;
+      }
+
+      &::placeholder {
+        font-size: 0.6rem;
+        color: #808080;
+      }
+    }
+  }
+
+  button.opacity {
+    text-align: center;
+    background-color: black;
+    color: darkgray;
+    display: block;
+    padding: 2% 0.5% 2% 0; // 상 우 하 좌
+    border-radius: 50px;
+    font-size: 0.5rem;
+    letter-spacing: -2px;
+    width: 20%;
+    cursor: pointer;
+    margin: 10% 0 7% 42%; // 상 우 하 좌
+    transition: all 0.1s ease-in-out;
+    border: none;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  div.signupletter {
+    font-size: 0.6rem;
+    margin: 10% 0 -3% 0;
+  }
+
+  a.signup {
+    font-size: 1.05rem;
+    margin: -5% 0 0 0; // 상 우 하 좌
+    text-decoration: underline;
+    &:hover {
+      font-weight: 600;
+      transform: scale(1.02);
+    }
+  }
 }
