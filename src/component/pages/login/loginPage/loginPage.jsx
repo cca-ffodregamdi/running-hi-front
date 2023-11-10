@@ -62,6 +62,7 @@ export default class LoginPage extends Component {
             <form className="inputinfo" onSubmit={this.handleSubmit}>
               {/* <text>아이디</text> */}
               <input
+                className="id-focus"
                 type="text"
                 placeholder="아이디를 입력해 주세요"
                 name="account"
@@ -70,6 +71,7 @@ export default class LoginPage extends Component {
               />
               {/* <text>비밀번호</text> */}
               <input
+                className="password-focus"
                 type="password"
                 placeholder="비밀번호를 입력해 주세요"
                 name="password"

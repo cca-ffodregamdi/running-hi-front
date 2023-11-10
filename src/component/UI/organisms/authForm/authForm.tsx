@@ -43,10 +43,16 @@ const AuthForm: React.FC<IAuthForm> = () => {
     // handleSubmit 함수를 onSubmit props로 보내줍니다.
     <form className="inputinfo" onSubmit={handleSubmit(onValid)}>
       <fieldset>
-        <label htmlFor="account">아이디</label>
+        {/* --------------------------------------------------- 아이디 입력  ----------------------------------------------------------- */}
+
+        <div className="headerName">
+          <label htmlFor="account">아이디</label>
+          <text className="necessary">*</text>
+        </div>
+
         <input
           {...register("account", {
-            required: "아이디 입력은 필수입니다.",
+            required: "아이디는 필수로 입력해야 합니다.",
             minLength: {
               value: 5,
               message: "아이디는 5글자 이상으로 이루어져야 합니다.",
@@ -59,16 +65,22 @@ const AuthForm: React.FC<IAuthForm> = () => {
           })}
           placeholder="사용하실 아이디를 입력해 주세요."
         />
-        <button type="button" className="checkcheck">
+        {/* <button type="button" className="checkcheck">
           중복 확인
-        </button>
+        </button> */}
         <p className="error">{errors?.account?.message}</p>
 
-        <label htmlFor="password">비밀번호</label>
+        {/* ---------------------------------------------------  비밀번호 입력 ----------------------------------------------------------*/}
+
+        <div className="nec_check">
+          <label htmlFor="password">비밀번호</label>
+          <text className="necessary">*</text>
+        </div>
+
         <input
           type="password"
           {...register("password", {
-            required: "비밀번호 입력은 필수입니다.",
+            required: "비밀번호는 필수로 입력해야 합니다.",
             minLength: {
               value: 8,
               message:
@@ -89,7 +101,12 @@ const AuthForm: React.FC<IAuthForm> = () => {
         />
         <p className="error">{errors?.password?.message}</p>
 
-        <label htmlFor="repassword">비밀번호 확인</label>
+        {/* ----------------------------------------------------- 비밀번호 재확인 ----------------------------------------------------- */}
+
+        <div className="headerName">
+          <label htmlFor="repassword">비밀번호 확인</label>
+          <text className="necessary">*</text>
+        </div>
         <input
           type="password"
           {...register("repassword", {
@@ -103,11 +120,17 @@ const AuthForm: React.FC<IAuthForm> = () => {
           placeholder="비밀번호를 한 번 더 입력해주세요"
         />
         <p className="error">{errors?.repassword?.message}</p>
+        {/* <text className="necessary_repassword">*</text> */}
 
-        <label htmlFor="name">이름</label>
+        {/* -------------------------------------------------------- 이름 입력 ---------------------------------------------------------- */}
+
+        <div className="headerName">
+          <label htmlFor="name">이름</label>
+          <text className="necessary">*</text>
+        </div>
         <input
           {...register("name", {
-            required: "이름 입력은 필수입니다.",
+            required: "이름은 필수로 입력해야 합니다.",
             minLength: {
               value: 2,
               message: "이름은 최소 2글자 이상으로 이루어져야 합니다.",
@@ -125,23 +148,50 @@ const AuthForm: React.FC<IAuthForm> = () => {
         />
         <p className="error">{errors?.name?.message}</p>
 
-        <label htmlFor="email">이메일</label>
-        <input
-          {...register("email", {
-            required: "이메일은 필수로 입력해야 합니다.",
-            pattern: {
-              value: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,
-              message: "올바른 이메일 형식으로 입력해주세요.",
-            },
-          })}
-          placeholder="이메일을 입력해 주세요."
-        />
-        <button type="button" className="checkemail">
-          이메일 인증
-        </button>
+        {/*  -------------------------------------------------------  이메일 입력 ----------------------------------------------- */}
+
+        <div className="headerName">
+          <label htmlFor="email">이메일</label>
+          <text className="necessary">*</text>
+        </div>
+        <div className="email_input">
+          <input
+            className="email_id"
+            {...register("email", {
+              required: "이메일은 필수로 입력해야 합니다.",
+              pattern: {
+                value: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,
+                message: "올바른 이메일 형식으로 입력해주세요.",
+              },
+            })}
+            // placeholder="이메일을 입력해 주세요."
+          />
+          {/* <text className="bridge">@</text> */}
+          {/* <input className="box" id="domain-txt" type="text" /> */}
+          <select className="box" id="domain-list">
+            <option value="naver.com">직접 입력</option>
+            <option value="naver.com">naver.com</option>
+            <option value="google.com">gmail.com</option>
+            <option value="hanmail.net">daum.net</option>
+            <option value="hanmail.net">hanmail.net</option>
+          </select>
+          {/* <button type="button" className="checkemail">
+            인증번호 받기
+          </button> */}
+        </div>
+        {/* <p className="erroremail">{errors?.email?.message}</p> */}
+        <input className="email_num" placeholder="인증번호를 입력해주세요." />
+        {/* <button type="button" className="checknum">
+          인증번호 확인
+        </button> */}
         <p className="error">{errors?.email?.message}</p>
 
-        <label htmlFor="nickname">닉네임</label>
+        {/* ----------------------------------------------------- 닉네임 입력 ------------------------------------------------------ */}
+
+        <div className="headerName">
+          <label htmlFor="nickname">닉네임</label>
+          <text className="necessary">*</text>
+        </div>
         <input
           {...register("nickname", {
             required: "닉네임은 필수로 입력해야 합니다.",
@@ -161,13 +211,50 @@ const AuthForm: React.FC<IAuthForm> = () => {
           })}
           placeholder="원하는 닉네임을 입력해 주세요."
         />
-        <button type="button" className="checkcheck">
+        {/* <button type="submit" className="checkcheck">
           중복 확인
-        </button>
+        </button> */}
         <p className="error">{errors?.nickname?.message}</p>
 
-        {/* <label htmlFor="gender">성별</label>
-        <label htmlFor="age">연령대</label> */}
+        {/* --------------------------------------------------------- 위치 입력 -------------------------------------------------------- */}
+
+        <div className="headerName">
+          <label htmlFor="location">위치</label>
+          <text className="necessary">*</text>
+          <text className="loc_info">
+            보다 더 정확한 코스 추천을 위해서 받고있는 정보입니다
+          </text>
+        </div>
+        <input className="address" placeholder="상세 주소" />
+        {/* <button type="button" className="checkaddress">
+          주소 검색
+        </button> */}
+
+        {/* ----------------------------------------------------- 성별 및 연령대 선택  ---------------------------------------------------- */}
+
+        <label htmlFor="gender_age">성별 및 연령대</label>
+        <text className="loc_info">(선택)</text>
+        <div className="genderage">
+          <div className="gender_input">
+            <select className="gender_box" id="gender-list">
+              <option value="select_gender">성별</option>
+              <option value="female">여성</option>
+              <option value="male">남성</option>
+              <option value="none">밝히고 싶지 않음</option>
+            </select>
+          </div>
+          <div className="age_input">
+            <select className="age_box" id="age-list">
+              <option value="1">연령대</option>
+              <option value="2">10세 이하</option>
+              <option value="3">10 - 19</option>
+              <option value="4">20 - 29</option>
+              <option value="5">30 - 39</option>
+              <option value="5">40 - 49</option>
+              <option value="6">50세 이상</option>
+            </select>
+          </div>
+        </div>
       </fieldset>
     </form>
   );
