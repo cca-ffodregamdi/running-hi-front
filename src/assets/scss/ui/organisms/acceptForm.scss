@@ -1,0 +1,39 @@
+.group-checkbox {
+  display: flex;
+  flex-direction: column;
+  // align-items: flex-start;
+
+  label {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    letter-spacing: -0.5px;
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+  }
+
+  div.signup-btn {
+    display: flex;
+    justify-content: center;
+    button {
+      text-align: center;
+      letter-spacing: -0.5px;
+      margin: 10% 0 0 0;
+      width: 40%;
+      padding: 1% 0 1% 1%;
+      color: white;
+      background-color: #004e98;
+      border: none;
+      cursor: pointer;
+      transition-duration: 0.4s;
+
+      &:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
