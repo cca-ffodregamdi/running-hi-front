@@ -85,7 +85,7 @@ export default class LoginPage extends Component {
             </form>
             <div className="register">
               <div className="signupletter">아직 회원이 아니신가요?</div>
-              <a className="signup" href="/signup">
+              <a className="signup" href="/acceptterms">
                 회원가입 하러가기
               </a>
               <div className="forget">

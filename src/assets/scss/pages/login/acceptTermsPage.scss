@@ -1,0 +1,59 @@
+.acceptTermsPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+.accept-container {
+  width: 60%;
+  border: 1px solid hsla(0, 0%, 65%, 0.158);
+  box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  z-index: 99; /* 맨 앞으로 돌출되도록! */
+  padding: 3rem;
+}
+
+div.accept-name {
+  color: #262626;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: -1px;
+}
+
+hr {
+  color: gray;
+  margin: 6% 0 0 0;
+}
+
+div.accept-logoname {
+  color: #262626;
+  /* color: #294da9; */
+  margin: 6% 0 0% 0; /* 상 우 하 좌 */
+  font-size: 2.8rem;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: -4px;
+}
+
+div.accept-name {
+  color: #262626;
+  margin: 0% 0 1% 0; /* 상 우 하 좌 */
+  font-size: 1.6rem;
+  letter-spacing: 6px;
+  font-weight: 100;
+}
+
+div.accept-Description {
+  color: #262626;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: -1px;
+  margin: 6% 0 10% 0; // 상우하좌
+}
+
+.label {
+  font-size: 1rem;
+}
