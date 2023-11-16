@@ -13,9 +13,11 @@ function SignUpPage() {
           </div>
           <AuthForm />
           <div className="signup-message">회원가입을 완료하시겠습니까?</div>
-          <button type="submit" className="regist">
-            회원가입 하기
-          </button>
+          <a href="/signupComplete">
+            <button type="submit" className="regist">
+              회원가입 하기
+            </button>
+          </a>
         </div>
       </div>
     </div>

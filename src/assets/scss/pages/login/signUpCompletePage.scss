@@ -1,0 +1,68 @@
+.signUpCompletePage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+.signUpCompletePage-container {
+  width: 50%;
+  height: 50%;
+  border: 1px solid hsla(0, 0%, 65%, 0.158);
+  box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  z-index: 99; /* 맨 앞으로 돌출되도록! */
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.signupComplete {
+  font-weight: bold;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  letter-spacing: -3px;
+  margin: 1.5% 0 1.6% 0;
+}
+div.signupplus {
+  font-weight: 100;
+}
+div.redirect {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 3% 0 0 0;
+}
+
+button.tohome,
+button.tologin {
+  border-radius: 1px;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: -1.5px;
+  margin: 0.5% 5%% 10% 5%;
+  padding: 1% 4% 1% 4%; // 상 우 하 좌
+
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+button.tologin {
+  background-color: #000;
+  color: #fff;
+
+  &:hover {
+    font-weight: bold;
+    background-color: #fefefe;
+    color: #000;
+  }
+}
+
+div.signupplus {
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: -1.5px;
+}
