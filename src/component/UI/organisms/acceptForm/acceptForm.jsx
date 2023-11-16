@@ -79,9 +79,11 @@ function AcceptForm() {
       </div>
 
       <div className="signup-btn">
-        <button disabled={!terms.serviceTerm || !terms.privacyTerm}>
-          회원가입 하러가기
-        </button>
+        <a href="/signup">
+          <button disabled={!terms.serviceTerm || !terms.privacyTerm}>
+            회원가입 하러가기
+          </button>
+        </a>
       </div>
     </div>
   );
