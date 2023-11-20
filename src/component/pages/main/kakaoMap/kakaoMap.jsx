@@ -26,6 +26,9 @@ function KakaoMap() {
       level: 1,
     };
     const map = new kakao.maps.Map(container, options);
+    map.setDraggable(false);
+    map.setZoomable(false);
+
     setMap(map);
   }, []);
 
@@ -66,7 +69,7 @@ function KakaoMap() {
           width: "80%",
           height: "80%",
           borderRadius: "30px",
-          zIndex: 1,
+          // zIndex: 1,
         }}
       ></div>
     </>

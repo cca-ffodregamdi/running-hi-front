@@ -33,6 +33,14 @@ function Header() {
           <a href="/mypage" className="header_link">
             Course
           </a>
+          <div className="submenu">
+            <a className="runninghis" href="#">
+              러닝하이 추천코스
+            </a>
+            <a className="runners" href="#">
+              러너들의 추천코스
+            </a>
+          </div>
         </li>
         <li className="header_item">
           <a href="/login" className="header_link">

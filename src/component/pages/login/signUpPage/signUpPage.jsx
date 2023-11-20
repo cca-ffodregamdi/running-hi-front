@@ -1,8 +1,12 @@
-import React from "react";
+// import React from "react";
+import React, { useState } from "react";
+import { ReactComponent as Ingbar02 } from "../../../../assets/img/ingbar02.svg";
 import AuthForm from "../../../UI/organisms/authForm/authForm.tsx";
 import "../../../../../src/assets/scss/pages/login/signUpPage.scss";
 
 function SignUpPage() {
+  const [isFormValid, setIsFormValid] = useState(false);
+
   return (
     <div className="signupPage">
       <div className="signup-container">
@@ -11,10 +15,10 @@ function SignUpPage() {
           <div className="signup-logoname">
             <a href="/">RUNNINGHI</a>
           </div>
-          <AuthForm />
+          <AuthForm isFormValid={isFormValid} setIsFormValid={setIsFormValid} />
           <div className="signup-message">회원가입을 완료하시겠습니까?</div>
           <a href="/signupComplete">
-            <button type="submit" className="regist">
+            <button type="submit" className="regist" disabled={!isFormValid}>
               회원가입 하기
             </button>
           </a>
@@ -22,7 +26,8 @@ function SignUpPage() {
       </div>
     </div>
   );
-  /*
+}
+/*
 
 회원가입 예외처리 정규표현식
 [v] 1. 이메일은 영문 소문자와 숫자로만 이루어지며, 3~30자로 @, .이 반드시 포함된다. 
@@ -36,6 +41,5 @@ function SignUpPage() {
 🚨 예외처리를 생각할 때 늘 공백과 0을 생각한다. [+ 이메일 인증] 공백 금지해!
 
 */
-}
 
 export default SignUpPage;

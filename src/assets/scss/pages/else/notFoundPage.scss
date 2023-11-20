@@ -1,0 +1,58 @@
+.notfoundpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+.notfoundpage-container {
+  width: 50%;
+  height: 50%;
+  border: 1px solid hsla(0, 0%, 65%, 0.158);
+  box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  z-index: 99; /* 맨 앞으로 돌출되도록! */
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+div.notfound {
+  font-weight: bold;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  letter-spacing: -3px;
+  margin: 2% 0 1.6% 0;
+  text-align: center;
+}
+div.notfoundText {
+  font-weight: 100;
+  font-size: 0.8rem;
+  text-align: center;
+  letter-spacing: -1px;
+  color: gray;
+}
+div.redirect {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  text-align: center;
+  margin: 3% 0 0 0;
+}
+
+button.tohome {
+  width: 150%;
+  height: 80%;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: -1.5px;
+  justify-content: center;
+
+  &:hover {
+    font-weight: bold;
+  }
+}

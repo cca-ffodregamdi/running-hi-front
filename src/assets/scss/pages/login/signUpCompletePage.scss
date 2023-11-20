@@ -18,6 +18,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 20px;
 }
 
 div.signupComplete {
@@ -31,6 +32,7 @@ div.signupplus {
 }
 div.redirect {
   display: flex;
+  gap: 40px;
   justify-content: center;
   text-align: center;
   margin: 3% 0 0 0;
@@ -38,12 +40,12 @@ div.redirect {
 
 button.tohome,
 button.tologin {
-  border-radius: 1px;
+  width: 150%;
+  height: 80%;
+  border-radius: 6px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   letter-spacing: -1.5px;
-  margin: 0.5% 5%% 10% 5%;
-  padding: 1% 4% 1% 4%; // 상 우 하 좌
 
   &:hover {
     font-weight: bold;
@@ -51,6 +53,7 @@ button.tologin {
 }
 
 button.tologin {
+  width: 120%;
   background-color: #000;
   color: #fff;
 
