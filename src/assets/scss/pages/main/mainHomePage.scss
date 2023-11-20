@@ -12,19 +12,21 @@ html {
 
   body {
     font-size: 1.6rem;
+    overflow: auto;
   }
   li {
     list-style: none;
   }
 
-  h2 {
+  h2.subtitle {
     color: #202124;
-    font-size: 1.9rem;
-    margin: 13% 0 0 0; // 상 우 하 좌
+    font-size: 1.7rem;
+    margin: 10% 0 0 0; // 상 우 하 좌
     text-align: center;
     letter-spacing: -5.5px;
     font-weight: 500;
     text-decoration: none;
+    line-height: 35px;
   }
 
   h1 {
@@ -56,6 +58,12 @@ html {
 
     @include button-hover;
   }
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 // 미디어 쿼리 Zone

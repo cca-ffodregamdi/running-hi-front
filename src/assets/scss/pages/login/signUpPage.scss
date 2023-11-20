@@ -1,10 +1,11 @@
 /* 공통 스타일 */
 
 .signupPage {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 180vh;
+  height: 200vh;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
@@ -15,6 +16,7 @@
   backdrop-filter: blur(20px);
   z-index: 99; /* 맨 앞으로 돌출되도록! */
   padding: 3rem;
+  border-radius: 20px;
 }
 
 div.signup-name,
