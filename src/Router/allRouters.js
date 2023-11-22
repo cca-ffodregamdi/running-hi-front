@@ -14,9 +14,10 @@ import FindIdPage from "../component/pages/login/findIdPage/findIdPage";
 import FindPwPage from "../component/pages/login/findPwPage/findPwPage";
 import SignUpPage from "../component/pages/login/signUpPage/signUpPage";
 import AcceptTermsPage from "../component/pages/login/acceptTermsPage/acceptTermsPage";
-import SignUpCompletePage from "../component/pages/login/signUpCompletePage/signUpCompletePage";
+// import SignUpCompletePage from "../component/pages/login/signUpCompletePage/signUpCompletePage";
 
 // Else -------------------------------------------------------------------------------------
+import ContactUs from "../component/pages/else/contactUs/contactUs";
 import NotFoundPage from "../component/pages/else/notFoundPage/notFoundPage";
 import TermsofServicePage from "../component/pages/else/termsofServicePage/termsofServicePage";
 import CustomerSupportPage from "../component/pages/else/customerSupportPage/customerSupportPage";
@@ -44,21 +45,18 @@ const AllRouters = () => {
         <Route exact path="/" element={<Layout />}>
           <Route path="/" element={<MainHomePage />} />
           <Route path="*" element={<NotFoundPage />} />
-
           {/* Main 관련 Routes */}
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/myfeed" element={<MyFeedPage />} />
           <Route path="/main" element={<MainHomePage />} />
           <Route path="/location" element={<KakaoMap />} />
-
           {/* Login 관련 Routes */}
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/findpw" element={<FindPwPage />} />
           <Route path="/findid" element={<FindIdPage />} />
           <Route path="/acceptterms" element={<AcceptTermsPage />} />
-          <Route path="/signupComplete" element={<SignUpCompletePage />} />
-
+          {/* <Route path="/signupComplete" element={<SignUpCompletePage />} /> */}
           {/* Post 관련 Routes */}
           <Route path="/comment" element={<Comment />} />
           <Route path="/postedit" element={<PostEditPage />} />
@@ -66,7 +64,6 @@ const AllRouters = () => {
           <Route path="/postcreate" element={<PostCreatePage />} />
           <Route path="/postdelete" element={<PostDeletePage />} />
           <Route path="/postdetail" element={<PostDetailPage />} />
-
           {/* Admin 관련 Routes */}
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/dashboard" element={<DashBoardPage />} />
@@ -76,11 +73,16 @@ const AllRouters = () => {
           path="/categorymanagement"
           element={<CategoryManagementPage />}
         /> */}
-
           {/* Else 관련 Routes */}
+          <Route path="/contactus" element={<ContactUs />} />
           <Route path="/termsofservice" element={<TermsofServicePage />} />
-          <Route path="/customersupport" element={<CustomerSupportPage />} />
-          <Route path="/customerfeedback" element={<CustomerFeedbackPage />} />
+          <Route path="/customersupport" element={<CustomerSupportPage />} /> //
+          FAQ 페이지
+          <Route
+            path="/customerfeedback"
+            element={<CustomerFeedbackPage />}
+          />{" "}
+          // Contact us 페이지
         </Route>
       </Routes>
     </>

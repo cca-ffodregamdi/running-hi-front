@@ -12,15 +12,15 @@ function Footer() {
 
       <ul className="footer_list">
         <li className="footer_item">
-          <a href="/faq" className="footer_link">
-            FAQ
+          <a href="/customersupport" className="footer_link">
+            고객센터
           </a>
         </li>
-        <li className="footer_item">
-          <a href="/" className="footer_link">
+        {/* <li className="footer_item">
+          <a href="/termsofservice" className="footer_link">
             이용약관
           </a>
-        </li>
+        </li> */}
 
         <li className="footer_item">
           <a href="/termsofservice" className="footer_link">
@@ -28,14 +28,14 @@ function Footer() {
           </a>
         </li>
 
-        <li className="footer_item">
-          <a href="/customersupport" className="footer_link">
+        {/* <li className="footer_item">
+          <a href="/" className="footer_link">
             About
           </a>
-        </li>
+        </li> */}
         <li className="footer_item">
-          <a href="/customerfeedback" className="footer_link">
-            Contact Us
+          <a href="/contactus" className="footer_link">
+            CONTACT US
           </a>
         </li>
       </ul>

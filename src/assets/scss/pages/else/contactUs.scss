@@ -1,11 +1,12 @@
-div.TermsofServicePage {
+div.ContactUspage {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
   margin: 10% 0 0 0;
 }
-div.TermsofService-container {
+
+div.ContactUs-container {
   width: 80%;
   height: 90vh;
   overflow: auto;
@@ -23,7 +24,7 @@ div.TermsofService-container {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  div.TermsofService-container2 {
+  div.ContactUs-container2 {
     background: rgb(0, 0, 0);
     position: relative;
     width: 90%;
@@ -41,7 +42,7 @@ div.TermsofService-container {
     margin: -35% 0 0 0;
   }
 }
-div.TermsofService {
+div.ContactUs {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -52,5 +53,10 @@ div.TermsofService {
   font-family: "Spoqa Han Sans Neo", "sans-serif";
   letter-spacing: -3px;
   margin: 0% 0 % 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+
+div.info-address {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  display: flex;
 }
