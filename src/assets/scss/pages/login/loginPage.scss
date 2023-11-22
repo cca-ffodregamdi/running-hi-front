@@ -20,6 +20,26 @@ div.logoname {
 
 // --------------------------------------------------------------------------
 
+// button.opacity {
+//   text-align: center;
+//   background-color: black;
+//   color: white;
+//   display: block;
+//   padding: 2% 0 2.5% 0; // 상 우 하 좌
+//   border-radius: 50px;
+//   font-size: 1.2rem;
+//   letter-spacing: -1px;
+//   width: 40%;
+//   cursor: pointer;
+//   margin: 5% 0 7% 30%; // 상 우 하 좌
+//   transition: all 0.1s ease-in-out;
+//   border: none;
+
+//   &:hover {
+//     font-weight: bold;
+//   }
+// }
+
 button.opacity {
   text-align: center;
   background-color: black;
@@ -27,15 +47,17 @@ button.opacity {
   display: block;
   padding: 2% 0 2.5% 0; // 상 우 하 좌
   border-radius: 50px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   letter-spacing: -1px;
-  width: 40%;
+  width: 100%;
   cursor: pointer;
-  margin: 5% 0 7% 30%; // 상 우 하 좌
+  margin: 5% 0 7% 0; // 상 우 하 좌
   transition: all 0.1s ease-in-out;
   border: none;
 
   &:hover {
+    background-color: 202124;
+    color: white;
     font-weight: bold;
   }
 }

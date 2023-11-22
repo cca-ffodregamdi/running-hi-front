@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useForm } from "react-hook-form";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../../../assets/scss/ui/organisms/authForm.scss";
-import { useState, useEffect } from "react";
 
 declare global {
   interface Window {
@@ -49,22 +49,16 @@ const AuthForm: React.FC<IAuthForm> = ({ isFormValid, setIsFormValid }) => {
       );
     } else {
       showCorrectPassword();
-
-      axios
-        .post("http://api/v1/verifyDuplicationId", { account: data.account })
-        .then((response) => {
-          console.log(response.data);
-        })
-        .catch((error) => {
-          console.error(error); // 에러 처리
-        });
     }
   };
 
   const handleCheckDuplicate = () => {
     const account = getValues("account");
+    console.log(account);
+    const qwe = { account: account };
+    console.log(qwe);
     axios
-      .post("http://localhost8000/api/v1/verifyDuplicationId", { account })
+      .post("http://15.165.120.114/api/v1/verifyDuplicationId", qwe)
       .then((response) => {
         console.log("데이터가 잘 전송되었구나요");
         if (response.data.isDuplicate) {
@@ -169,6 +163,7 @@ const AuthForm: React.FC<IAuthForm> = ({ isFormValid, setIsFormValid }) => {
             },
           })}
           placeholder="사용하실 아이디를 입력해 주세요."
+          onChange={() => setIsIdValid(true)}
         />
         <button
           type="button"
@@ -209,7 +204,7 @@ const AuthForm: React.FC<IAuthForm> = ({ isFormValid, setIsFormValid }) => {
               message: "비밀번호는 16자 이내로 구성되어야 합니다.",
             },
           })}
-          placeholder="비밀번호를 입력해 주세요."
+          placeholder="비밀번호를 입력해 주세요"
         />
         <p className="error">{errors?.password?.message}</p>
 
@@ -281,7 +276,7 @@ const AuthForm: React.FC<IAuthForm> = ({ isFormValid, setIsFormValid }) => {
             {...register("email", {
               // required: "이메일은 필수로 입력해야 합니다.",
               pattern: {
-                value: /^([a-z0-9_\.-]{2,6})$/,
+                value: /^([a-z0-9_\.-]{2,9})$/,
                 message: "올바른 이메일 형식으로 입력해주세요.",
               },
             })}
@@ -300,12 +295,12 @@ const AuthForm: React.FC<IAuthForm> = ({ isFormValid, setIsFormValid }) => {
             인증번호 받기
           </button>
         </div>
+        <p className="error">{errors?.email?.message}</p>
         {/* <p className="erroremail">{errors?.email?.message}</p> */}
         <input className="email_num" placeholder="인증번호를 입력해주세요." />
         <button type="button" className="checknum">
           인증번호 확인
         </button>
-        <p className="error">{errors?.email?.message}</p>
 
         {/* ----------------------------------------------------- 닉네임 입력 ------------------------------------------------------ */}
 

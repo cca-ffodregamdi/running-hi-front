@@ -286,7 +286,7 @@ function AcceptForm() {
             <br /> <br />
             <strong>1. 개인정보를 제공받는 자 : 러닝하이</strong>
             <br />
-            <strong>2. 제공받는 자의 개인정보 이용목적 : </strong>
+            <strong>2. 제공받는 자의 개인정보 이용목적 : 서비스 이용</strong>
             <br />
             <strong>
               3. 제공하는 개인정보 항목 : 이름, 주소, 이메일, 성별, 연령대{" "}

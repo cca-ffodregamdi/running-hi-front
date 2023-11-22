@@ -11,7 +11,7 @@ function SignUpPage() {
     <div className="signupPage">
       <div className="signup-container">
         <div className="signup-form-container">
-          <div className="signup-name">SIGNUP</div>
+          <div className="signup-name">SIGN UP</div>
           <div className="signup-logoname">
             <a href="/">RUNNINGHI</a>
           </div>
