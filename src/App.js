@@ -10,11 +10,9 @@ function App() {
     <>
       <BrowserRouter>
         <AllRouters />
-        <Routes>
-          {/* 임시 이미지 업로드 */}
-          <Route path="/imgUpload" element={<ImageUploadPage />} />
-        </Routes>
-      </BrowserRouter>{" "}
+        {/* 임시 이미지 업로드 */}
+        {/* <Route path="/imgUpload" element={<ImageUploadPage />} /> */}
+      </BrowserRouter>
     </>
   );
 }
