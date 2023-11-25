@@ -38,7 +38,7 @@ jobs:
 
       ## React Build
       - name: Generate build
-        run: npm run build
+        run: CI='false' npm run build
 
       ########## CD(Continuous Delivery) ##########
       ## docker hub에 로그인하고 runninghi-dev에 이미지를 빌드 & push 합니다.
