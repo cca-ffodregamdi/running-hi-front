@@ -40,55 +40,55 @@ jobs:
       - name: Generate build
         run: CI='false' npm run build
 
-      ########## CD(Continuous Delivery) ##########
-      ## docker hub에 로그인하고 runninghi-dev에 이미지를 빌드 & push 합니다.
-      # - name: Docker build & push to dev repo
-      #   if: contains(github.ref, 'dev')
-      #   run: |
-      #     docker login -u "${{ secrets.DOCKER_USERNAME_DEV }}" -p "${{ secrets.DOCKER_PASSWORD_DEV }}"
-      #     docker build -f Dockerfile-dev -t "${{ secrets.DOCKER_USERNAME_DEV }}"/runninghi-dev .
-      #     docker push "${{ secrets.DOCKER_USERNAME_DEV }}"/runninghi-dev
+      ######### CD(Continuous Delivery) ##########
+      # docker hub에 로그인하고 runninghi-front-dev에 이미지를 빌드 & push 합니다.
+      - name: Docker build & push to dev repo
+        if: contains(github.ref, 'dev')
+        run: |
+          docker login -u "${{ secrets.DOCKER_USERNAME_DEV }}" -p "${{ secrets.DOCKER_PASSWORD_DEV }}"
+          docker build -f Dockerfile-front-dev -t "${{ secrets.DOCKER_USERNAME_DEV }}"/runninghi-front-dev .
+          docker push "${{ secrets.DOCKER_USERNAME_DEV }}"/runninghi-front-dev
 
-      # ## docker hub에 로그인하고 runninghi-prod에 이미지를 빌드 & push 합니다.
-      # - name: Docker build & push to prod repo
-      #   if: contains(github.ref, 'master')
-      #   run: |
-      #     docker login -u "${{ secrets.DOCKER_USERNAME_PROD }}" -p "${{ secrets.DOCKER_PASSWORD_PROD }}"
-      #     docker build -f Dockerfile-prod -t "${{ secrets.DOCKER_USERNAME_PROD }}"/runninghi-prod .
-      #     docker push "${{ secrets.DOCKER_USERNAME_PROD }}"/runninghi-prod
+      ## docker hub에 로그인하고 runninghi-front-prod에 이미지를 빌드 & push 합니다.
+      - name: Docker build & push to prod repo
+        if: contains(github.ref, 'master')
+        run: |
+          docker login -u "${{ secrets.DOCKER_USERNAME_PROD }}" -p "${{ secrets.DOCKER_PASSWORD_PROD }}"
+          docker build -f Dockerfile-front-prod -t "${{ secrets.DOCKER_USERNAME_PROD }}"/runninghi-front-prod .
+          docker push "${{ secrets.DOCKER_USERNAME_PROD }}"/runninghi-front-prod
 
-      # ## AWS EC2에 접속하고 develop을 배포합니다.
-      # - name: Deploy to Dev
-      #   uses: appleboy/ssh-action@master
-      #   id: deploy-dev
-      #   if: contains(github.ref, 'dev')
-      #   with:
-      #     host: ${{ secrets.HOST_DEV }} # EC2 인스턴스 퍼블릭 DNS
-      #     username: ${{ secrets.USERNAME }} # 인스턴스를 시작하는 데 사용되는 AMI에 정의된 사용자 이름을 입력합니다. 사용자 지정 사용자 이름을 정의하지 않은 경우 기본 사용자 이름인 ubuntu을(를) 사용합니다.
-      #     key: ${{ secrets.PRIVATE_KEY }} # 키 페어의 pem 키
-      #     #            sudo docker-compose up -d
-      #     script: |
-      #       sudo docker login -u "${{ secrets.DOCKER_USERNAME_DEV }}" -p "${{ secrets.DOCKER_PASSWORD_DEV }}"
-      #       sudo docker pull "${{ secrets.DOCKER_USERNAME_DEV }}"/runninghi-dev
-      #       sudo docker stop $(docker ps -a -q)
-      #       sudo docker run -d --log-driver=syslog -p 8081:8081 -e SPRING_PROFILES_ACTIVE=dev "${{ secrets.DOCKER_USERNAME_DEV }}"/runninghi-dev
-      #       sudo docker rm -f $(sudo docker ps --filter 'status=exited' -a -q)
-      #       sudo docker image prune -a -f
+      ## AWS EC2에 접속하고 develop을 배포합니다.
+      - name: Deploy to Dev
+        uses: appleboy/ssh-action@master
+        id: deploy-dev
+        if: contains(github.ref, 'dev')
+        with:
+          host: ${{ secrets.HOST_DEV }} # EC2 인스턴스 퍼블릭 DNS
+          username: ${{ secrets.USERNAME }} # 인스턴스를 시작하는 데 사용되는 AMI에 정의된 사용자 이름을 입력합니다. 사용자 지정 사용자 이름을 정의하지 않은 경우 기본 사용자 이름인 ubuntu을(를) 사용합니다.
+          key: ${{ secrets.PRIVATE_KEY }} # 키 페어의 pem 키
+          #            sudo docker-compose up -d
+          script: |
+            sudo docker login -u "${{ secrets.DOCKER_USERNAME_DEV }}" -p "${{ secrets.DOCKER_PASSWORD_DEV }}"
+            sudo docker pull "${{ secrets.DOCKER_USERNAME_DEV }}"/runninghi-front-dev
+            sudo docker stop $(docker ps -a -q)
+            sudo docker run -d --log-driver=syslog -p 3000:3000 "${{ secrets.DOCKER_USERNAME_DEV }}"/runninghi-front-dev
+            sudo docker rm -f $(sudo docker ps --filter 'status=exited' -a -q)
+            sudo docker image prune -a -f
 
-      # ## AWS EC2에 접속하고 production을 배포합니다.
-      # - name: Deploy to Prod
-      #   uses: appleboy/ssh-action@master
-      #   id: deploy-prod
-      #   if: contains(github.ref, 'master')
-      #   with:
-      #     host: ${{ secrets.HOST_PROD }} # EC2 인스턴스 퍼블릭 DNS
-      #     username: ${{ secrets.USERNAME }} # 인스턴스를 시작하는 데 사용되는 AMI에 정의된 사용자 이름을 입력합니다. 사용자 지정 사용자 이름을 정의하지 않은 경우 기본 사용자 이름인 ubuntu을(를) 사용합니다.
-      #     key: ${{ secrets.PRIVATE_KEY }} # 키 페어의 pem 키
-      #     #            sudo docker-compose up -d
-      #     script: |
-      #       sudo docker login -u "${{ secrets.DOCKER_USERNAME_PROD }}" -p "${{ secrets.DOCKER_PASSWORD_PROD }}"
-      #       sudo docker pull "${{ secrets.DOCKER_USERNAME_PROD }}"/runninghi-prod
-      #       sudo docker stop $(docker ps -a -q)
-      #       sudo docker run -d --log-driver=syslog -p 8082:8082 -e SPRING_PROFILES_ACTIVE=prod "${{ secrets.DOCKER_USERNAME_PROD }}"/runninghi-prod
-      #       sudo docker rm -f $(sudo docker ps --filter 'status=exited' -a -q)
-      #       sudo docker image prune -f
+      ## AWS EC2에 접속하고 production을 배포합니다.
+      - name: Deploy to Prod
+        uses: appleboy/ssh-action@master
+        id: deploy-prod
+        if: contains(github.ref, 'master')
+        with:
+          host: ${{ secrets.HOST_PROD }} # EC2 인스턴스 퍼블릭 DNS
+          username: ${{ secrets.USERNAME }} # 인스턴스를 시작하는 데 사용되는 AMI에 정의된 사용자 이름을 입력합니다. 사용자 지정 사용자 이름을 정의하지 않은 경우 기본 사용자 이름인 ubuntu을(를) 사용합니다.
+          key: ${{ secrets.PRIVATE_KEY }} # 키 페어의 pem 키
+          #            sudo docker-compose up -d
+          script: |
+            sudo docker login -u "${{ secrets.DOCKER_USERNAME_PROD }}" -p "${{ secrets.DOCKER_PASSWORD_PROD }}"
+            sudo docker pull "${{ secrets.DOCKER_USERNAME_PROD }}"/runninghi-front-prod
+            sudo docker stop $(docker ps -a -q)
+            sudo docker run -d --log-driver=syslog -p 8082:8082 -e SPRING_PROFILES_ACTIVE=prod "${{ secrets.DOCKER_USERNAME_PROD }}"/runninghi-front-prod
+            sudo docker rm -f $(sudo docker ps --filter 'status=exited' -a -q)
+            sudo docker image prune -f
