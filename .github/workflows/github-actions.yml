@@ -89,8 +89,8 @@ jobs:
             # sudo docker-compose up -d
           script: |
             sudo docker login -u "${{ secrets.DOCKER_USERNAME_PROD }}" -p "${{ secrets.DOCKER_PASSWORD_PROD }}"
-            sudo docker stop laughing_buck
+            sudo docker stop runninghi_react_prod
             sudo docker rm -f $(sudo docker ps --filter 'status=exited' -a -q)
             sudo docker pull "${{ secrets.DOCKER_USERNAME_PROD }}"/runninghi-front-prod
-            sudo docker run -d --log-driver=syslog -p 3001:3001 "${{ secrets.DOCKER_USERNAME_PROD }}"/runninghi-front-prod -it --name runninghi_react_prod
+            sudo docker run --name runninghi_react_prod -d --log-driver=syslog -p 3001:3001 "${{ secrets.DOCKER_USERNAME_PROD }}"/runninghi-front-prod
             sudo docker image prune -a -f
