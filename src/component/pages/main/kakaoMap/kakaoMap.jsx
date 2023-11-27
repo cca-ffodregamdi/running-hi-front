@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../mainHomePage/mainHomePage";
 import "../../../../../src/assets/scss/pages/main/kakaoMap.scss";
 
+const { kakao } = window;
+
 function KakaoMap() {
   const [map, setMap] = useState(null);
   const [currentPosition, setCurrentPosition] = useState({});
