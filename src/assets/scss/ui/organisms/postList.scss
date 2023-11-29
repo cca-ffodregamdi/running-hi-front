@@ -1,0 +1,81 @@
+.custom-slider-container {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.post-card {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.post-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.post-card img:hover {
+  filter: brightness(50%) contrast(70%);
+  cursor: pointer;
+}
+
+.postTitle {
+  position: absolute;
+  bottom: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  letter-spacing: -2.5px;
+  text-align: center;
+  padding: 15px;
+  width: 80%;
+  border-radius: 5px;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.post-card:hover .postTitle {
+  bottom: 35%;
+}
+
+.slick-slide {
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-prev-arrow,
+.custom-next-arrow {
+  font-size: 1rem;
+  position: absolute;
+  top: 48%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  color: gray;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 5px 13px;
+  cursor: pointer;
+  z-index: 1;
+  text-align: center;
+
+  &:hover {
+    background-color: #d9d9d9;
+    color: black;
+    font-weight: 400;
+  }
+}
+
+.custom-prev-arrow {
+  left: 0%;
+}
+
+.custom-next-arrow {
+  right: -1%;
+}

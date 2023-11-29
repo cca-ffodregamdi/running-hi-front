@@ -14,7 +14,7 @@ import FindIdPage from "../component/pages/login/findIdPage/findIdPage";
 import FindPwPage from "../component/pages/login/findPwPage/findPwPage";
 import SignUpPage from "../component/pages/login/signUpPage/signUpPage";
 import AcceptTermsPage from "../component/pages/login/acceptTermsPage/acceptTermsPage";
-// import SignUpCompletePage from "../component/pages/login/signUpCompletePage/signUpCompletePage";
+import SignUpCompletePage from "../component/pages/main/signUpCompletePage/signUpCompletePage";
 
 // Else -------------------------------------------------------------------------------------
 import ContactUs from "../component/pages/else/contactUs/contactUs";
@@ -33,7 +33,6 @@ import ReportManagementPage from "../component/pages/admin/reportManagementPage/
 // Post --------------------------------------------------------------------------------------
 import Comment from "../component/pages/post/comment/comment";
 import PostEditPage from "../component/pages/post/postEditPage/postEditPage";
-import PostListPage from "../component/pages/post/postListPage/postListPage";
 import PostCreatePage from "../component/pages/post/postCreatePage/postCreatePage";
 import PostDeletePage from "../component/pages/post/postDeletePage/postDeletePage";
 import PostDetailPage from "../component/pages/post/postDetailPage/postDetailPage";
@@ -56,14 +55,13 @@ const AllRouters = () => {
           <Route path="/findpw" element={<FindPwPage />} />
           <Route path="/findid" element={<FindIdPage />} />
           <Route path="/acceptterms" element={<AcceptTermsPage />} />
-          {/* <Route path="/signupComplete" element={<SignUpCompletePage />} /> */}
+          <Route path="/signupComplete" element={<SignUpCompletePage />} />
           {/* Post 관련 Routes */}
           <Route path="/comment" element={<Comment />} />
           <Route path="/postedit" element={<PostEditPage />} />
-          <Route path="/postlist" element={<PostListPage />} />
           <Route path="/postcreate" element={<PostCreatePage />} />
           <Route path="/postdelete" element={<PostDeletePage />} />
-          <Route path="/postdetail" element={<PostDetailPage />} />
+          <Route path="/post/:postId" element={<PostDetailPage />} />
           {/* Admin 관련 Routes */}
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/dashboard" element={<DashBoardPage />} />

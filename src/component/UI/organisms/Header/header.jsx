@@ -70,7 +70,7 @@ function Header() {
               <a className="runninghis" href="#">
                 러닝하이 추천코스
               </a>
-              <a className="runners" href="#">
+              <a className="runner" href="#">
                 러너들의 추천코스
               </a>
             </div>

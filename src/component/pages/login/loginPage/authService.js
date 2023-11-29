@@ -1,5 +1,5 @@
 export async function login(username, password) {
-  const response = await fetch("http://15.165.120.114/api/v1/signIn", {
+  const response = await fetch("https://15.165.120.114/api/v1/signIn", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -1,107 +1,106 @@
-@media (min-width: 768px) {
-    .body{
-        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-        display: flex;
-        flex-direction: row-reverse;
-        max-width: 1000px;
-        max-width: var(--large-width);
-        margin-left: auto;
-        margin-right: auto;
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
+/* @media (min-width: 768px) {
+  .body {
+    font-family: "Spoqa Han Sans Neo", "sans-serif";
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1000px;
+    max-width: var(--large-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
-
 body {
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .container {
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    text-align: center;
-    background-color: white;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-    font-size: 24px;
-    margin-bottom: 10px;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .post-meta {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 20px;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
 }
 
 .post-content {
-    font-size: 16px;
-    margin-bottom: 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
 .back-link {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
 .back-link:hover {
-    color: #0056b3;
+  color: #0056b3;
 }
 
 .comment-section {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .comment-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .comment-form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
 .comment-form button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .comment {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .comment-text {
-    font-size: 16px;
-    margin: 0;
+  font-size: 16px;
+  margin: 0;
 }
 
 .comment-meta {
-    font-size: 14px;
-    color: #777;
-    margin-top: 5px;
-}
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+} */
