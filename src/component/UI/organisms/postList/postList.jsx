@@ -1,9 +1,11 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import PostItem from "../../molecules/postItem/postItem";
 import "../../../../assets/scss/ui/organisms/postList.scss";
+// import PostDetail from "../../../pages/post/postDetailPage";
 
 const CustomPrevArrow = ({ onClick }) => (
   <button className="custom-prev-arrow" onClick={onClick}>
@@ -50,9 +52,15 @@ const PostList = ({ posts }) => {
     <div className="custom-slider-container">
       <Slider ref={sliderRef} {...settings}>
         {posts.map((post) => (
-          <div key={post.id} className="post-card">
-            <PostItem title={post.title} imageUrl={post.imageUrl} />
-          </div>
+          <Link key={post.id} to={`/post/${post.id}`} className="post-link">
+            <div className="post-card">
+              <PostItem
+                title={post.title}
+                imageUrl={post.imageUrl}
+                tags={post.tags}
+              />
+            </div>
+          </Link>
         ))}
       </Slider>
     </div>

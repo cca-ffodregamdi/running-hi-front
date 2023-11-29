@@ -1,0 +1,162 @@
+.logo-container {
+  margin: -45% 0% 0% 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  .logo-text {
+    margin-bottom: 20px;
+    font-style: italic;
+    letter-spacing: -4px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+a.postdetail-logoname {
+  color: black;
+  margin: 0% 0 5% 0; /* 상 우 하 좌 */
+  font-size: 2rem;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: -2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.postDetailContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0% 0% 0% 20%;
+  width: 60%;
+  height: 100vh;
+  border: 1px solid hsla(0, 0%, 65%, 0.158);
+  box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  z-index: 99; // 맨 앞으로 돌출되도록!
+  padding: 2rem;
+  border-radius: 20px;
+
+  .post-detail-wrapper {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+
+    .postDetail {
+      .postDetailImageContainer {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        margin-top: 6%;
+        border-radius: 10px;
+
+        .postDetailImage {
+          border-radius: 10px;
+          width: 120%;
+          height: 100%;
+          margin-left: -8%;
+          filter: brightness(50%) contrast(70%);
+        }
+
+        .postDetailTitle {
+          position: absolute;
+          top: 35%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          letter-spacing: -2px;
+          text-align: center;
+          font-size: 2rem;
+          color: #fff; // 제목을 흰색으로 변경
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // 제목에 그림자 효과 추가
+          text-transform: uppercase; // 제목을 대문자로 변환
+          font-family: "Spoqa Han Sans Neo", "sans-serif";
+        }
+
+        .postDetailWriter {
+          position: absolute;
+          top: 55%; // 제목 바로 아래에 위치하도록 설정
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          font-size: 1.2rem;
+          letter-spacing: -1px;
+          color: #fff; // 작성자 정보를 흰색으로 변경
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); // 작성자 정보에 그림자 효과 추가
+          font-family: "Spoqa Han Sans Neo", "sans-serif";
+        }
+
+        .tags {
+          position: absolute;
+          top: 70%;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          font-family: "Spoqa Han Sans Neo", "sans-serif";
+
+          .tag {
+            margin-bottom: 5px;
+            padding: 5px 15px;
+            background-color: #ddd;
+            border-radius: 20px;
+            font-size: 1rem;
+            color: #666;
+            text-transform: uppercase; // 태그를 대문자로 변환
+          }
+        }
+      }
+
+      .postContents {
+        letter-spacing: -1px;
+        margin-top: 6%;
+
+        font-size: 1rem;
+        line-height: 1.7;
+        color: #333;
+        text-align: justify;
+        font-family: "Spoqa Han Sans Neo", "sans-serif";
+      }
+    }
+  }
+}
+div.loading {
+  font-size: 2rem;
+  letter-spacing: -3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+div.loading::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

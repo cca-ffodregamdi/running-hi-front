@@ -52,14 +52,14 @@ export default class LoginPage extends Component {
     }
 
     return (
-      <div className="container">
+      <div className="loginContainer">
         <div className="login-container">
-          <div className="form-container">
+          <div className="login-form-container">
             <div className="login">LOGIN</div>
             <div className="logoname">
               <a href="/">RUNNINGHI</a>
             </div>
-            <form className="inputinfo" onSubmit={this.handleSubmit}>
+            <form className="inputinfo-login" onSubmit={this.handleSubmit}>
               {/* <text>아이디</text> */}
               <input
                 className="id-focus"

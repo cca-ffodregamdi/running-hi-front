@@ -39,12 +39,18 @@
     .inquiry {
       font-size: 1.2rem;
       font-family: "Spoqa Han Sans Neo", "sans-serif";
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
     }
 
     h2.inquiryheader {
       font-size: 1em;
       letter-spacing: -2.5px;
       font-family: "Spoqa Han Sans Neo", "sans-serif";
+      margin-bottom: 10px;
     }
 
     label {
@@ -52,12 +58,20 @@
       margin-bottom: 10px;
     }
 
+    textarea.inquiry {
+      height: 150px; /* 수정된 부분: 높이 조정 */
+    }
+
     input[type="text"],
-    textarea {
-      width: 200%;
-      padding: 100px;
+    textarea.inquiry {
+      width: 400%;
+      margin: -50% 0% 0% -148%;
+      padding: 10px;
       border-radius: 5px;
       border: 1px solid #ccc;
+      // margin-bottom: 10px;
+      font-size: 1rem;
+      font-family: "Spoqa Han Sans Neo", "sans-serif";
     }
 
     input[type="submit"] {
@@ -69,31 +83,32 @@
       border-radius: 15px;
       letter-spacing: -1px;
       background-color: #000;
+      margin: 0% 0% 0% 223%;
       font-family: "Spoqa Han Sans Neo", "sans-serif";
-
+      margin-top: 10px;
       &:hover {
-        background-color: #202124;
+        background-color: #4c4c4c;
       }
     }
   }
 
   .inquiry-list {
-    margin: 0% 0 0 0;
-    position: fixed;
+    margin: 13% 0 0 0;
+    // position: fixed;
     z-index: 1;
 
     div {
       cursor: pointer;
 
       h3.inquiry-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         letter-spacing: -1px;
         font-weight: bold;
         margin: 7% 0 0% 0;
       }
 
-      p.inquiry-content {
-        display: none;
+      div.inquiry-content {
+        display: block;
         margin: 1% 0 10% 0;
         font-size: 1rem;
         letter-spacing: -1px;
@@ -102,6 +117,7 @@
       &.expanded {
         p.inquiry-content {
           display: block;
+          margin-top: 10px;
         }
       }
     }

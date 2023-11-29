@@ -52,25 +52,30 @@
 
 .custom-prev-arrow,
 .custom-next-arrow {
+  font-size: 1rem;
   position: absolute;
-  top: 50%;
+  top: 48%;
   transform: translateY(-50%);
   background-color: #fff;
-  color: #000;
+  color: gray;
   border: 1px solid #ccc;
-  padding: 10px;
+  border-radius: 50px;
+  padding: 5px 13px;
   cursor: pointer;
   z-index: 1;
+  text-align: center;
 
   &:hover {
     background-color: #d9d9d9;
+    color: black;
+    font-weight: 400;
   }
 }
 
 .custom-prev-arrow {
-  left: 1%;
+  left: 0%;
 }
 
 .custom-next-arrow {
-  right: 1%;
+  right: -1%;
 }
