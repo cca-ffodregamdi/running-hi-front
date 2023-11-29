@@ -54,6 +54,7 @@ const AuthForm: React.FC<IAuthForm> = ({ isFormValid, setIsFormValid }) => {
 
   const handleCheckDuplicate = () => {
     const account = getValues("account");
+    console.log(account);
     const qwe = { account: account };
     console.log(qwe);
     axios
