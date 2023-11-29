@@ -38,13 +38,6 @@ function KakaoMap() {
     if (map && currentPosition.lat && currentPosition.lng) {
       map.setCenter(
         new kakao.maps.LatLng(currentPosition.lat, currentPosition.lng)
-      ); // 현재 위치로 지도의 중심을 이동시킴!
-    }
-  }, [map, currentPosition]);
-  useEffect(() => {
-    if (map && currentPosition.lat && currentPosition.lng) {
-      map.setCenter(
-        new kakao.maps.LatLng(currentPosition.lat, currentPosition.lng)
       ); // 현재 위치로 지도 중심 이동
 
       // 마커를 생성하고 지도에 표시
@@ -71,7 +64,7 @@ function KakaoMap() {
           width: "80%",
           height: "80%",
           borderRadius: "30px",
-          // zIndex: 1,
+          zIndex: 1,
         }}
       ></div>
     </>

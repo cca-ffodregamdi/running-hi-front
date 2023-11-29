@@ -92,5 +92,5 @@ jobs:
             sudo docker stop runninghi_react_prod
             sudo docker rm -f $(sudo docker ps --filter 'status=exited' -a -q)
             sudo docker pull "${{ secrets.DOCKER_USERNAME_PROD }}"/runninghi-front-prod
-            sudo docker run --name runninghi_react_prod -d --log-driver=syslog -p 3000:3000 "${{ secrets.DOCKER_USERNAME_PROD }}"/runninghi-front-prod
-            sudo docker image prune -f
+            sudo docker run --name runninghi_react_prod -d --log-driver=syslog -p 3001:3001 "${{ secrets.DOCKER_USERNAME_PROD }}"/runninghi-front-prod
+            sudo docker image prune -a -f
