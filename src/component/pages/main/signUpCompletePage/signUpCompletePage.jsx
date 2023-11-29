@@ -12,7 +12,7 @@ const SignUpCompletePage = (props) => {
           <Signupcheck width="70" height="70" />
           <div className="signupComplete">회원가입이 완료되었습니다</div>
           <div className="signupplus">
-            {userName} 님, 회원가입을 축하드립니다 <br /> 러닝하이를 통해 다양한
+            라현지 님, 회원가입을 축하드립니다 <br /> 러닝하이를 통해 다양한
             러닝 코스를 즐겨보세요!
           </div>
 

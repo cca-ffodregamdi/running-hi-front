@@ -1,20 +1,23 @@
 import axios from "axios";
+import { Link } from "react-router-dom";
 import KakaoMap from "../kakaoMap/kakaoMap";
 import React, { useState, useEffect } from "react";
 import "../../../../../src/assets/scss/pages/main/mainHomePage.scss";
 
 import Header from "../../../UI/organisms/Header/header";
 import Footer from "../../../UI/organisms/Footer/footer";
+import PostList from "../../../UI/organisms/postList/postList";
+import PostDetail from "../../post/postDetailPage/postDetailPage";
 
 function MainHomePage() {
-  const [posts, setPosts] = useState([]);
   const [showMap, setShowMap] = useState(false);
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
+  const [posts, setPosts] = useState([]);
+  const [userpost, setUserpost] = useState([]);
 
   const handleMapButtonClick = () => {
     setShowMap(true);
-    // setShowLocationText(true);
   };
 
   useEffect(() => {
@@ -27,24 +30,95 @@ function MainHomePage() {
     }
   }, [index]);
 
-  // useEffect(() => {
-  //   const fetchPosts = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         "http://15.165.120.114/api/v1/admin-post"
-  //       );
-  //       setPosts(response.data.adminPostList);
-  //     } catch (error) {
-  //       console.error("There was an error!", error);
-  //     }
-  //   };
+  useEffect(() => {
+    const adminPostItem = [
+      {
+        id: 1,
+        title: "광화문 30분 코스",
+        imageUrl:
+          "https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/201910/27/5297f67b-6fcd-4fcd-8917-d318b81f9f99.jpg",
+        tags: ["서울", "쉬운 코스"],
+      },
+      {
+        id: 2,
+        title: "한강 20분 코스",
+        imageUrl:
+          "https://i.namu.wiki/i/t2zvEe7ws93H0jrNgi_6co5wMkXToxQuGkmO7AhHbMrhPBSY9LZwNpthQZRkWYxYBB2ZPj8M08p5vw_yOJAz_g.webp",
+        tags: ["서울", "적당한 코스"],
+      },
+      {
+        id: 3,
+        title: "일산 호수공원 10분 코스",
+        imageUrl:
+          "https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/3fuW/image/xVaOXxQnDVtv8lJb_nZ6Oxd7tjU",
+        tags: ["경기", "어려운 코스"],
+      },
+      {
+        id: 4,
+        title: "서울숲 30분 코스",
+        imageUrl:
+          "https://www.ktsketch.co.kr/news/photo/202305/7546_38653_564.jpg",
+        tags: ["서울", "적당한 코스"],
+      },
 
-  //   fetchPosts();
-  // }, []);
+      {
+        id: 5,
+        title: "석촌호수 20분 코스",
+        imageUrl:
+          "https://news.tbs.seoul.kr/Upload/Image/20200327/00000000000000087737.jpg",
+        tags: ["서울", "어려운 코스"],
+      },
+    ];
+
+    setPosts(adminPostItem);
+  }, []);
+
+  useEffect(() => {
+    const userPost = [
+      {
+        id: 1,
+        title: "여의도공원",
+        imageUrl:
+          "https://kr.imboldn.com/wp-content/uploads/2023/04/%EC%97%AC%EC%9D%98%EB%8F%84%EA%B3%B5%EC%9B%90-%EC%BD%94%EC%8A%A4-01-800x450.jpg",
+        tags: ["서울", "쉬운 코스", "10분"],
+      },
+      {
+        id: 2,
+        title: "잠수교",
+        imageUrl:
+          "https://kr.imboldn.com/wp-content/uploads/2023/04/%EC%9E%A0%EC%88%98%EA%B5%90-%EC%BD%94%EC%8A%A4-06-800x450.jpg",
+        tags: ["서울", "어려운 코스", "20분"],
+      },
+      {
+        id: 3,
+        title: "노들섬",
+        imageUrl:
+          "https://kr.imboldn.com/wp-content/uploads/2023/04/%EB%85%B8%EB%93%A4%EC%84%AC-%EC%BD%94%EC%8A%A4-01-800x450.jpg",
+        tags: ["서울", "적당한 코스", "25분"],
+      },
+      {
+        id: 4,
+        title: "연트럴파크",
+        imageUrl:
+          "https://kr.imboldn.com/wp-content/uploads/2023/04/%EC%97%B0%ED%8A%B8%EB%9F%B4%ED%8C%8C%ED%81%AC-%EC%BD%94%EC%8A%A4-02-800x450.jpg",
+        tags: ["서울", "어려운 코스", "15분"],
+      },
+
+      {
+        id: 5,
+        title: "매헌 시민의 숲",
+        imageUrl:
+          "https://mediahub.seoul.go.kr/uploads/mediahub/2022/10/ElQpYxqDvBeplDIgejunBgFUMkvpqhUi.jpg",
+        tags: ["서울", "쉬운 코스", "30분"],
+      },
+    ];
+
+    setUserpost(userPost);
+  }, []);
 
   return (
     <>
-      <div class="wrapper">
+      <div className="wrapper">
         <div className="page-container">
           <div>
             <Header />
@@ -65,18 +139,23 @@ function MainHomePage() {
 
                 {showMap && <KakaoMap />}
               </btn-contain>
-              <div className="post-gallery">
-                {posts.map((post, index) => (
-                  <div className="post-card" key={post.adminPostNo}>
-                    <h2>{post.adminPostTitle}</h2>
-                    <img src={post.thumbnail} alt={post.adminPostTitle} />
-                    <p>{post.adminPostContent}</p>
-                    {post.keywords.map((keyword, index) => (
-                      <span key={index}>{keyword.keyword}</span>
-                    ))}
-                  </div>
-                ))}
-              </div>
+              <text className="runninghi">러닝하이 추천 코스</text>
+              {/* 각 게시글에 Link를 사용하여 상세 페이지로 이동하는 링크 추가 */}
+              <PostList
+                posts={posts.map((post) => ({
+                  ...post,
+                  link: `/post/${post.id}`,
+                }))}
+              />
+              <div style={{ marginBottom: "50px" }}></div>
+              <text className="runners">러너들의 추천 코스</text>
+              {/* 각 게시글에 Link를 사용하여 상세 페이지로 이동하는 링크 추가 */}
+              <PostList
+                posts={userpost.map((post) => ({
+                  ...post,
+                  link: `/post/${post.id}`,
+                }))}
+              />
             </main>
           </div>
         </div>

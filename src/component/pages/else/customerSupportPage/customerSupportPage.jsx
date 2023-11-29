@@ -10,6 +10,7 @@ function FAQ() {
   const [selectedInquiryId, setSelectedInquiryId] = useState(null);
 
   const handleInquiryClick = () => {
+    setSelectedCategory(null);
     setShowInquiry(true);
     setShowFAQ(false);
   };
@@ -21,27 +22,22 @@ function FAQ() {
   };
 
   const handleInquiryTitleClick = (id) => {
-    setSelectedInquiryId((prev) => {
-      if (prev === id) {
-        return null;
-      } else {
-        return id;
-      }
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // 문의 내용을 처리하는 로직
+    setSelectedInquiryId((prev) => (prev === id ? null : id));
   };
 
   return (
     <>
       <div className="FAQpage">
+        {/* <div className="logo-container">
+          <a className="logo-text" href="/">
+            {" "}
+            RUNNINGHI
+          </a>
+        </div> */}
         <div className="FAQpage-container">
           <div className="FAQpage-container2">
             <div className="FAQ">
-              <Link to="/customersupport">고객센터</Link>
+              <a href="/">고객센터</a>
             </div>
 
             <div className="FAQ-category">
@@ -77,23 +73,34 @@ function FAQ() {
             {inquiryData.map((inquiry) => (
               <div
                 key={inquiry.id}
+                className={`inquiry-item ${
+                  selectedInquiryId === inquiry.id ? "expanded" : ""
+                }`}
                 onClick={() => handleInquiryTitleClick(inquiry.id)}
               >
                 <h3 className="inquiry-title">{inquiry.title}</h3>
-                {selectedInquiryId === inquiry.id && (
-                  <p className="inquiry-content">{inquiry.content}</p>
-                )}
+                <div className="inquiry-content-wrapper">
+                  {selectedInquiryId === inquiry.id && (
+                    <div
+                      className="inquiry-content"
+                      dangerouslySetInnerHTML={{
+                        __html: inquiry.content.replace(/\n/g, "<br>"),
+                      }}
+                    ></div>
+                  )}
+                </div>
               </div>
             ))}
           </div>
         )}
         {showInquiry && (
           <div className="inquiry-form">
-            <form onSubmit={handleSubmit}>
+            <form>
               <label>
                 <textarea
                   className="inquiry"
                   placeholder="문의내용을 입력해주세요.."
+                  style={{ whiteSpace: "pre-wrap" }}
                 ></textarea>
               </label>
               <input type="submit" value="문의 제출" />

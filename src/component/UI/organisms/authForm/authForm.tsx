@@ -58,7 +58,7 @@ const AuthForm: React.FC<IAuthForm> = ({ isFormValid, setIsFormValid }) => {
     const qwe = { account: account };
     console.log(qwe);
     axios
-      .post("http://15.165.120.114/api/v1/verifyDuplicationId", qwe)
+      .post("https://15.165.120.114/api/v1/verifyDuplicationId", qwe)
       .then((response) => {
         console.log("데이터가 잘 전송되었구나요");
         if (response.data.isDuplicate) {

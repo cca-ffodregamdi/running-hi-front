@@ -82,11 +82,32 @@ html {
     min-height: 100vh;
   }
 
-  .post-card {
+  text.runninghi {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: -3px;
+    margin: 5% 0% 0% 4%;
+  }
+
+  text.runners {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: -3px;
+    margin: 0% 0% 0% 4%;
+  }
+
+  text.course-add-info {
+    font-size: 1rem;
+    margin: 0% 0% 0% 4%;
+    letter-spacing: -2px;
+    color: gray;
+  }
+
+  div.post-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;
+    width: 100%;
     margin: 20px;
     padding: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -108,6 +129,9 @@ html {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+  }
+  .course-add-info {
+    font-size: 1rem;
   }
 }
 
