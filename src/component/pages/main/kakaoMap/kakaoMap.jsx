@@ -24,10 +24,10 @@ function KakaoMap() {
   useEffect(() => {
     const container = document.getElementById("map");
     const options = {
-      center: new kakao.map.LatLng(37.5665, 126.978), // 이건 카카오에서 제공하는 기본 위치값!
+      center: new kakao.maps.LatLng(37.5665, 126.978), // 이건 카카오에서 제공하는 기본 위치값!
       level: 1,
     };
-    const map = new kakao.map.Map(container, options);
+    const map = new kakao.maps.Map(container, options);
     map.setDraggable(false);
     map.setZoomable(false);
 
@@ -37,15 +37,22 @@ function KakaoMap() {
   useEffect(() => {
     if (map && currentPosition.lat && currentPosition.lng) {
       map.setCenter(
-        new kakao.map.LatLng(currentPosition.lat, currentPosition.lng)
+        new kakao.maps.LatLng(currentPosition.lat, currentPosition.lng)
+      ); // 현재 위치로 지도의 중심을 이동시킴!
+    }
+  }, [map, currentPosition]);
+  useEffect(() => {
+    if (map && currentPosition.lat && currentPosition.lng) {
+      map.setCenter(
+        new kakao.maps.LatLng(currentPosition.lat, currentPosition.lng)
       ); // 현재 위치로 지도 중심 이동
 
       // 마커를 생성하고 지도에 표시
-      const markerPosition = new kakao.map.LatLng(
+      const markerPosition = new kakao.maps.LatLng(
         currentPosition.lat,
         currentPosition.lng
       );
-      const marker = new kakao.map.Marker({
+      const marker = new kakao.maps.Marker({
         position: markerPosition,
       });
       marker.setMap(map);

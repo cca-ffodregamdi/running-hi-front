@@ -33,7 +33,6 @@ import ReportManagementPage from "../component/pages/admin/reportManagementPage/
 // Post --------------------------------------------------------------------------------------
 import Comment from "../component/pages/post/comment/comment";
 import PostEditPage from "../component/pages/post/postEditPage/postEditPage";
-import PostListPage from "../component/pages/post/postListPage/postListPage";
 import PostCreatePage from "../component/pages/post/postCreatePage/postCreatePage";
 import PostDeletePage from "../component/pages/post/postDeletePage/postDeletePage";
 import PostDetailPage from "../component/pages/post/postDetailPage/postDetailPage";
@@ -60,7 +59,6 @@ const AllRouters = () => {
           {/* Post 관련 Routes */}
           <Route path="/comment" element={<Comment />} />
           <Route path="/postedit" element={<PostEditPage />} />
-          <Route path="/postlist" element={<PostListPage />} />
           <Route path="/postcreate" element={<PostCreatePage />} />
           <Route path="/postdelete" element={<PostDeletePage />} />
           <Route path="/postdetail" element={<PostDetailPage />} />
