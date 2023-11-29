@@ -25,7 +25,7 @@ export default class LoginPage extends Component {
     console.log("password:", password);
 
     axios
-      .post("https://localhost:8082/api/v1/sign-in", this.state)
+      .post("http://localhost:8082/api/v1/sign-in", this.state)
       .then(function (resp) {
         console.log(resp.data);
         if (account !== null && password !== null) {
