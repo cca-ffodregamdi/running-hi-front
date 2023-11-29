@@ -27,20 +27,20 @@ function MainHomePage() {
     }
   }, [index]);
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await axios.get(
-          "http://15.165.120.114/api/v1/admin-post"
-        );
-        setPosts(response.data.adminPostList);
-      } catch (error) {
-        console.error("There was an error!", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchPosts = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         "http://15.165.120.114/api/v1/admin-post"
+  //       );
+  //       setPosts(response.data.adminPostList);
+  //     } catch (error) {
+  //       console.error("There was an error!", error);
+  //     }
+  //   };
 
-    fetchPosts();
-  }, []);
+  //   fetchPosts();
+  // }, []);
 
   return (
     <>
